@@ -252,8 +252,9 @@ function renderDocx() {
     ...ledger.sources.map((s) => `- **${s.id}.** ${s.title}. ${s.publisher}, ${s.date}. <${s.url}>`),
     "",
   ].join("\n");
-  const md = front + prepare(reportMd, ledger, "docx", { diagramPng: (n) => root("build/diagrams", `${n}.png`) }) + sourcesSection;
-  pandoc(md, ["-t", "docx", "--reference-doc", root("tools/templates/reference.docx"), "-o", root("deliverables", FILES.docx)]);
+  // Relative image names keep the build machine's paths out of the Word file.
+  const md = front + prepare(reportMd, ledger, "docx", { diagramPng: (n) => `${n}.png` }) + sourcesSection;
+  pandoc(md, ["-t", "docx", "--resource-path", root("build/diagrams"), "--reference-doc", root("tools/templates/reference.docx"), "-o", root("deliverables", FILES.docx)]);
 }
 
 // ---------- the web page ----------

@@ -1,8 +1,8 @@
 # Audit
 
-Run: 2026-10-23 13:19 UTC. Mode: offline, built files checked.
+Run: 2026-10-23 14:21 UTC. Mode: offline, built files checked.
 
-38 sources, 132 cited claims, 11 checks, 0 failed.
+38 sources, 132 cited claims, 12 checks, 0 failed.
 
 | Group | Check | Result |
 |---|---|---|
@@ -17,3 +17,4 @@ Run: 2026-10-23 13:19 UTC. Mode: offline, built files checked.
 | Brand kit | No em dashes, en dashes or emoji | Pass |
 | Deliverables | Every X post fits in 280 characters (links count as 23) | Pass |
 | Deliverables | Generated files exist and match the current sources | Pass |
+| Deliverables | Generated files carry no local file paths | Pass |

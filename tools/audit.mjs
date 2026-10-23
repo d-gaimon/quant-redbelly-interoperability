@@ -173,6 +173,23 @@ if (BUILT) {
     }
   }
   check("Deliverables", "Generated files exist and match the current sources", problems);
+
+  // Local paths in generated files would reveal the machine they were built on.
+  const LOCAL = /file:\/\/|\/home\/|\/root\/|\/tmp\/|\/Users\/|[A-Z]:\\Users/;
+  const traces = [];
+  const docx = root("deliverables", want[1]);
+  if (existsSync(docx)) {
+    for (const part of ["word/document.xml", "docProps/core.xml", "docProps/app.xml"]) {
+      const xml = spawnSync("unzip", ["-p", docx, part], { encoding: "utf8" });
+      if (xml.status === 0 && LOCAL.test(xml.stdout)) traces.push(`${want[1]} ${part} contains a local path`);
+    }
+  }
+  for (const [file, text] of Object.entries(generated())) if (LOCAL.test(text)) traces.push(`${file} contains a local path`);
+  if (existsSync(pdf)) {
+    const raw = readFileSync(pdf, "latin1");
+    if (LOCAL.test(raw)) traces.push(`${want[0]} contains a local path`);
+  }
+  check("Deliverables", "Generated files carry no local file paths", traces);
 }
 
 // ---------- 8. live sources ----------

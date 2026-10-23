@@ -2,6 +2,8 @@
 
 Feasibility research for the Redbelly DAO Community Task Board, **TASK-29: Quant Overledger and Redbelly Interoperability Research**. It asks whether Redbelly Network could connect to Quant's Overledger, what that would take, what it could offer institutions using Redbelly, and where compliance could break when Receptor credentials or Tokeniser assets meet other chains.
 
+**Live site:** https://quant-redbelly-interoperability.vercel.app/
+
 > **Notice.** Redbelly and Quant have no announced partnership, talks or plans, and nothing here suggests otherwise. This is feasibility research only. It contains no price talk and no investment advice.
 
 ## The answer in brief
@@ -77,12 +79,12 @@ research/          ledger.json (sources and checked phrases), AUDIT.md
 deliverables/      generated PDF, Word, Markdown, CSV and thread files
 site/              the generated web page with its assets and downloads
 tools/             build.mjs, audit.mjs, serve.mjs and their templates
-deploy/            nginx, Caddy and Docker setups for a VPS
+deploy/            nginx, Caddy and Docker setups for a VPS (vercel.json at the root)
 ```
 
 ## Deploying
 
-`site/` is static. See [`deploy/README.md`](deploy/README.md) for nginx, Caddy and Docker.
+`site/` is static. See [`deploy/README.md`](deploy/README.md) for nginx, Caddy, Docker and Vercel (`vercel.json` serves `site/` without a build step).
 
 ## Brand
 

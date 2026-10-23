@@ -1,6 +1,6 @@
 # Deploying the site
 
-`site/` is a finished static website: one page, its assets and the downloadable deliverables. It needs no Node, database or build step on the server. Pick one of the three routes below.
+`site/` is a finished static website: one page, its assets and the downloadable deliverables. It needs no Node, database or build step on the server. Pick one of the routes below.
 
 Commands assume Ubuntu or Debian, a domain pointing at the server, and the repository cloned to `/var/www/quant-redbelly-interoperability`. Replace `research.example.org` with your domain.
 
@@ -41,6 +41,10 @@ sudo cp deploy/Caddyfile /etc/caddy/Caddyfile
 sudo sed -i 's/research.example.org/YOUR.DOMAIN/' /etc/caddy/Caddyfile
 sudo systemctl reload caddy
 ```
+
+## Option 4: Vercel
+
+Import the repository in Vercel and deploy with the default settings. `vercel.json` tells Vercel to skip the install and build steps and serve `site/` as it is, with the same security headers as the nginx setup. Do not set a build command in the Vercel dashboard: `npm run build` regenerates the PDF and Word files and needs pandoc and Chromium, which Vercel does not provide.
 
 ## What the configuration does
 
