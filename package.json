@@ -1,0 +1,20 @@
+{
+  "name": "quant-redbelly-interoperability",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Feasibility research: could Redbelly Network connect to Quant's Overledger? Report, community summary, source list and the website that presents them.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "audit": "node tools/audit.mjs",
+    "audit:online": "node tools/audit.mjs --online",
+    "serve": "node tools/serve.mjs",
+    "check": "node tools/audit.mjs --built"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}

@@ -1,0 +1,43 @@
+name: Audit
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 6 * * 1" # Mondays: re-check that every source still says what the report cites
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    name: Claims, wording and brand rules
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - run: node tools/audit.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: audit-offline
+          path: research/AUDIT.md
+
+  online:
+    name: Live sources
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - run: node tools/audit.mjs --online
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: audit-online
+          path: research/AUDIT.md

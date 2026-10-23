@@ -1,0 +1,19 @@
+# Caddy serves site/ with automatic HTTPS. Replace the domain and path, then:
+#   sudo cp deploy/Caddyfile /etc/caddy/Caddyfile && sudo systemctl reload caddy
+research.example.org {
+	root * /var/www/quant-redbelly-interoperability/site
+	file_server
+	encode gzip
+
+	@hidden path */.*
+	respond @hidden 404
+
+	header {
+		Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		X-Frame-Options DENY
+	}
+	header /assets/* Cache-Control "public, max-age=2592000"
+	header /downloads/* Content-Disposition attachment
+}

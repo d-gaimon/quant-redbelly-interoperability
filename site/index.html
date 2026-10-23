@@ -1,0 +1,1160 @@
+<!doctype html>
+<html lang="en-AU" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redbelly and Overledger: Feasibility Research</title>
+<meta name="description" content="Feasibility research on whether Redbelly Network could connect to Quant's Overledger, what it would take, what it could offer institutions and where compliance could break. Every claim sourced and labelled Confirmed, Analysis or Unknown.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0c1317">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Could Redbelly plug into Quant's Overledger?">
+<meta property="og:description" content="Feasibility research on whether Redbelly Network could connect to Quant's Overledger, what it would take, what it could offer institutions and where compliance could break. Every claim sourced and labelled Confirmed, Analysis or Unknown.">
+<meta property="og:image" content="assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/be-vietnam-pro-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/be-vietnam-pro-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/main.css">
+<script src="assets/js/theme.js"></script>
+</head>
+<body data-lens="all">
+<a class="skip" href="#report">Skip to the report</a>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<header class="topbar">
+  <a class="brand" href="#top" aria-label="Back to top">
+    <img class="logo logo-on-dark" src="assets/img/dao-logo-on-dark.png" alt="Redbelly DAO" width="45" height="32">
+    <img class="logo logo-on-light" src="assets/img/dao-logo-on-light.png" alt="Redbelly DAO" width="45" height="32">
+    <span class="brand-text">Overledger feasibility</span>
+  </a>
+  <nav class="topnav" id="topnav" aria-label="Sections">
+    <a href="#short-answer">Answer</a>
+    <a href="#overledger">Overledger</a>
+    <a href="#connect-now">Connect now?</a>
+    <a href="#compliance">Compliance</a>
+    <a href="#unknowns">Unknowns</a>
+    <a href="#community">Summary</a>
+    <a href="#sources">Sources</a>
+    <a href="#downloads">Downloads</a>
+  </nav>
+  <button class="icon-btn theme-toggle" type="button" aria-label="Switch between light and dark theme">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+  <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="topnav" aria-label="Open section menu">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><span>TASK-29</span><span>Feasibility research</span><span>Cut-off 23 October 2026</span></p>
+      <h1 class="headline" data-split>Could Redbelly plug into <em>Quant's Overledger?</em></h1>
+      <p class="lede">Short answer: <strong class="decode" data-decode="Not connected today.">Not connected today.</strong> A thin link looks possible on paper. Anything deeper needs Quant, and Redbelly's compliance would not cross chains by default.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#short-answer">Read the findings</a>
+        <a class="btn" href="downloads/Overledger-Redbelly-Feasibility-Study.pdf">Download the PDF</a>
+        <a class="btn btn-quiet" href="#sources">38 sources</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 520 400" class="link-art">
+        <defs>
+          <linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="currentColor" stop-opacity="1"/><stop offset="1" stop-color="currentColor" stop-opacity=".15"/></linearGradient>
+        </defs>
+        <g class="la-grid">
+          <path d="M0 80H520M0 160H520M0 240H520M0 320H520M104 0V400M208 0V400M312 0V400M416 0V400"/>
+        </g>
+        <g class="la-chain">
+          <path class="la-hex" d="M108 128l64 37v74l-64 37-64-37v-74z"/>
+          <path class="la-hex la-hex-in" d="M108 150l45 26v52l-45 26-45-26v-52z"/>
+          <text x="108" y="200" class="la-name">Redbelly</text>
+          <text x="108" y="220" class="la-mono">EVM · 151</text>
+        </g>
+        <path class="la-wire la-wire-a" d="M172 202C220 202 228 202 262 202"/>
+        <path class="la-wire la-wire-b" d="M300 202C326 202 334 182 359 182"/>
+        <circle class="la-dot" r="4"><animateMotion dur="2.6s" repeatCount="indefinite" path="M172 202C220 202 228 202 262 202" keyPoints="0;1;1" keyTimes="0;.7;1" calcMode="linear"/></circle>
+        <g class="la-gate">
+          <rect x="262" y="170" width="38" height="64" rx="6"/>
+          <path d="M281 186l10 4v7c0 6-4 10-10 12-6-2-10-6-10-12v-7z" class="la-shield"/>
+          <text x="281" y="256" class="la-mono la-cap">identity gate</text>
+        </g>
+        <g class="la-ol">
+          <rect x="344" y="104" width="164" height="196" rx="14" class="la-box"/>
+          <text x="426" y="134" class="la-name">Overledger</text>
+          <text x="426" y="152" class="la-mono">self-serve families</text>
+          <g class="la-fams">
+            <g class="la-fam la-fam-hot"><circle cx="368" cy="182" r="7"/><text x="381" y="186">EVM</text></g>
+            <g class="la-fam"><circle cx="368" cy="212" r="7"/><text x="381" y="216">Solana</text></g>
+            <g class="la-fam"><circle cx="368" cy="242" r="7"/><text x="381" y="246">Cosmos</text></g>
+            <g class="la-fam"><circle cx="440" cy="182" r="7"/><text x="453" y="186">SUI</text></g>
+            <g class="la-fam"><circle cx="440" cy="212" r="7"/><text x="453" y="216">Hedera</text></g>
+            <g class="la-fam"><circle cx="440" cy="242" r="7"/><text x="453" y="246">Aptos</text></g>
+          </g>
+          <text x="426" y="280" class="la-mono">+ managed engagement</text>
+        </g>
+        <text x="332" y="230" class="la-mono la-q">untested</text>
+      </svg>
+    </div>
+  </div>
+  <div class="notice-strip" role="note">
+    <span class="ns-tag">Notice</span>
+    <span>Redbelly and Quant have no announced partnership, talks or plans. This page is feasibility research only, with no price talk and no investment advice.</span>
+  </div>
+</section>
+
+<section class="glance" aria-label="Key numbers from the sources">
+  <div class="stat"><span class="stat-n" data-count="6">6</span><span class="stat-t">blockchain families Overledger lets accounts add themselves, EVM among them</span><a class="cite" href="https://docs.overledger.dev/docs/connectors" data-src="S07">S07</a></div><div class="stat"><span class="stat-n" data-count="2">2</span><span class="stat-t">documented routes onto Overledger's Connectors: self-serve or managed engagement</span><a class="cite" href="https://docs.overledger.dev/docs/connectors" data-src="S07">S07</a></div><div class="stat"><span class="stat-n" data-count="3">3</span><span class="stat-t">base chains Fusion Rollup connected at testnet launch, none of them Redbelly</span><a class="cite" href="https://docs.overledger.dev/docs/fusion-rollup" data-src="S11">S11</a></div><div class="stat"><span class="stat-n" data-count="0">0</span><span class="stat-t">of the 10 Overledger documentation pages in this report that name Redbelly</span><a class="cite" href="https://docs.overledger.dev/docs/connectors" data-src="S07">S07</a></div>
+</section>
+
+<div class="lens-wrap">
+  <div class="lens" role="group" aria-label="Highlight findings by status">
+    <span class="lens-label">Lens</span>
+    <button type="button" data-lens="all" aria-pressed="true">All</button>
+    <button type="button" data-lens="confirmed" aria-pressed="false"><i class="dot dot-confirmed"></i>Confirmed <b>10</b></button>
+    <button type="button" data-lens="analysis" aria-pressed="false"><i class="dot dot-analysis"></i>Analysis <b>12</b></button>
+    <button type="button" data-lens="unknown" aria-pressed="false"><i class="dot dot-unknown"></i>Unknown <b>6</b></button>
+  </div>
+</div>
+
+<div class="layout">
+  <aside class="toc" aria-label="Report contents">
+    <p class="toc-title">Contents</p>
+    <ol><li><a href="#read-first">Read this first</a></li><li><a href="#short-answer">The short answer</a></li><li><a href="#why-now">Why the question is being asked now</a></li><li><a href="#overledger">Overledger in plain words</a></li><li><a href="#redbelly">Redbelly, in the terms that matter here</a></li><li><a href="#connect-now">Can Redbelly connect now?</a></li><li><a href="#the-work">What a connection would take</a></li><li><a href="#offer">What it could offer institutions</a></li><li><a href="#compliance">Credentials and assets across chains</a></li><li><a href="#unknowns">Not possible yet, and unknown</a></li><li><a href="#signals">What would change the answer</a></li><li><a href="#method">Method and limits</a></li><li><a href="#glossary">Glossary</a></li></ol>
+  </aside>
+  <main class="report" id="report">
+<section id="read-first" class="level2">
+<h2 data-split><span class="h-num">01</span>Read this first</h2>
+<p>This is feasibility research. It asks three things: whether Redbelly Network could connect to Quant's Overledger, what that would take, and what it could offer institutions that use Redbelly.</p>
+<div class="panel panel-notice" data-status="notice">
+<p><span class="panel-label">Read before sharing</span></p>
+<p><strong>No partnership, talks or plans.</strong> Redbelly and Quant have no announced partnership or talks, and nothing in this report suggests otherwise <a href="https://taskboard.redbellydao.network/tasks/TASK-29" class="cite" data-src="S38">S38</a>. Redbelly has not published an official position on bridging <a href="https://taskboard.redbellydao.network/tasks/TASK-29" class="cite" data-src="S38">S38</a>, so anything that is not in a public source is treated here as unknown.</p>
+</div>
+<p>Every finding in this report sits in one of three labelled panels:</p>
+<ul>
+<li><strong>Confirmed.</strong> Stated in a public source. The source is linked right next to the claim.</li>
+<li><strong>Analysis.</strong> Our reasoning, built only on confirmed facts. It is not a statement by Redbelly, Quant or anyone else.</li>
+<li><strong>Unknown.</strong> Not answered by any public source we could find. We name these gaps so that nobody fills them with guesses.</li>
+</ul>
+<p>Research cut-off: 23 October 2026. Overledger's documentation says its list of supported networks can change and that the live list comes from its API <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>, so parts of this picture can change quickly. The section <a href="#signals">What would change the answer</a> lists what to watch.</p>
+</section>
+<section id="short-answer" class="level2">
+<h2 data-split><span class="h-num">02</span>The short answer</h2>
+<div class="panel panel-confirmed" data-status="confirmed">
+<p><span class="panel-label">Confirmed</span></p>
+<ul>
+<li>Overledger reaches blockchains through Connectors. Public, permissionless networks in six families, including EVM, can be added self-serve; permissioned and consortium networks need a managed engagement with Quant's team <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>.</li>
+<li>Redbelly runs EVM smart contracts written in Solidity <a href="https://vine.redbelly.network/sc-smart-contracts" class="cite" data-src="S24">S24</a> and its mainnet is chain ID 151 <a href="https://vine.redbelly.network/environments/" class="cite" data-src="S22">S22</a>.</li>
+<li>On Redbelly, an account can only write to the network after it claims an access credential from an accredited issuer <a href="https://redbelly.network/blog/devnet" class="cite" data-src="S29">S29</a> <a href="https://docs.redbelly.network/pages/modules/issuer/" class="cite" data-src="S17">S17</a> <a href="https://access.redbelly.network/" class="cite" data-src="S28">S28</a>.</li>
+<li>Redbelly is not named in any of the Overledger documentation pages listed in this report <a href="https://docs.overledger.dev/docs/start-here" class="cite" data-src="S05">S05</a> <a href="https://docs.overledger.dev/docs/overview" class="cite" data-src="S06">S06</a> <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a> <a href="https://docs.overledger.dev/docs/overledger-firewall" class="cite" data-src="S10">S10</a> <a href="https://docs.overledger.dev/docs/fusion-rollup" class="cite" data-src="S11">S11</a>, and it is not one of the networks Fusion Rollup connected at testnet launch <a href="https://docs.overledger.dev/docs/fusion-rollup" class="cite" data-src="S11">S11</a>.</li>
+</ul>
+</div>
+<div class="panel panel-analysis" data-status="analysis">
+<p><span class="panel-label">Analysis</span></p>
+<p><strong>Redbelly is not connected to Overledger today.</strong> A thin link, where an Overledger account registers its own Redbelly node and passes signed transactions through, looks possible on paper because Redbelly is EVM-compatible and Overledger lets accounts add new EVM networks. It is untested, and it depends on Quant accepting an identity-gated chain on a route meant for permissionless networks. Anything deeper (a public listing, Quant-held signing, bridges, or a Fusion Rollup connection) is not possible yet unless Quant chooses to support Redbelly. Redbelly's compliance controls would not follow assets across chains by default; a connection would have to be designed to carry them.</p>
+</div>
+<section id="scorecard" class="level3">
+<h3>Scorecard</h3>
+<p>We split "connect" into three depths, because each one needs different work:</p>
+<ul>
+<li><strong>Reach:</strong> Overledger can read Redbelly and pass on transactions that someone else has signed.</li>
+<li><strong>Orchestrate:</strong> Overledger tools (workflows, signing, webhooks) act on Redbelly directly.</li>
+<li><strong>Move:</strong> assets or messages travel between Redbelly and other chains through Overledger.</li>
+</ul>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th>Capability</th>
+<th>Depth</th>
+<th>Status on 23 October 2026</th>
+<th>What it depends on</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Read Redbelly data through Overledger</td>
+<td>Reach</td>
+<td><span class="chip chip-analysis">Possible on paper, untested</span></td>
+<td>An account registering a Redbelly node through self-serve, and Quant accepting it <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a></td>
+</tr>
+<tr class="even">
+<td>Pass signed Redbelly transactions through Overledger</td>
+<td>Reach</td>
+<td><span class="chip chip-analysis">Possible on paper, untested</span></td>
+<td>The same, plus every sending address holding Redbelly write access <a href="https://redbelly.network/blog/devnet" class="cite" data-src="S29">S29</a> <a href="https://github.com/tycayomide/redbelly-testnet-bridge/blob/main/ARTICLE.md" class="cite" data-src="S36">S36</a></td>
+</tr>
+<tr class="odd">
+<td>Redbelly listed for all Overledger users</td>
+<td>Reach</td>
+<td><span class="chip chip-no">Not available today</span></td>
+<td>A public node from a whitelisted provider, or a Quant engagement <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a></td>
+</tr>
+<tr class="even">
+<td>Quant-held keys signing on Redbelly</td>
+<td>Orchestrate</td>
+<td><span class="chip chip-unknown">Unknown</span></td>
+<td>Quant support, and whose identity the signing address would be verified under <a href="https://docs.overledger.dev/docs/signing" class="cite" data-src="S09">S09</a> <a href="https://redbelly.network/blog/devnet" class="cite" data-src="S29">S29</a></td>
+</tr>
+<tr class="odd">
+<td>Bridge flow in Quant Connect to Redbelly</td>
+<td>Move</td>
+<td><span class="chip chip-no">Not available today</span></td>
+<td>Quant supporting Redbelly as a destination for the bridge flow <a href="https://docs.overledger.dev/docs/set-a-unilateral-bridge" class="cite" data-src="S12">S12</a></td>
+</tr>
+<tr class="even">
+<td>Redbelly as a Fusion Rollup base chain</td>
+<td>Move</td>
+<td><span class="chip chip-no">Not possible yet</span></td>
+<td>A Quant project; no self-serve route is documented <a href="https://docs.overledger.dev/docs/fusion-rollup" class="cite" data-src="S11">S11</a></td>
+</tr>
+<tr class="odd">
+<td>Reaching TCH's On-Chain Money network</td>
+<td>Move</td>
+<td><span class="chip chip-unknown">Unknown</span></td>
+<td>TCH and its banks; the network's ledgers are not public <a href="https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative" class="cite" data-src="S01">S01</a></td>
+</tr>
+<tr class="even">
+<td>Redbelly compliance carried to other chains</td>
+<td>Move</td>
+<td><span class="chip chip-no">Not by default</span></td>
+<td>How a connection is designed (see <a href="#compliance">Credentials and assets across chains</a>)</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+</section>
+<section id="why-now" class="level2">
+<h2 data-split><span class="h-num">03</span>Why the question is being asked now</h2>
+<div class="panel panel-confirmed" data-status="confirmed">
+<p><span class="panel-label">Confirmed</span></p>
+<p>On 24 September 2026, The Clearing House (TCH) announced that it had selected Quant to power its On-Chain Money Initiative, a network for clearing and settling tokenised deposits between financial institutions <a href="https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative" class="cite" data-src="S01">S01</a>. Quant says its technology will provide the network's interoperability, orchestration and transaction-management layer, with connections to existing fiat payment systems such as RTP and CHIPS <a href="https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative" class="cite" data-src="S01">S01</a> <a href="https://quant.network/press-releases/the-clearing-house-partners-with-quant-to-advance-the-on-chain-money-initiative/" class="cite" data-src="S02">S02</a> <a href="https://quant.network/news/quant-powers-the-clearing-houses-on-chain-money-initiative-in-the-us/" class="cite" data-src="S03">S03</a>. TCH expects the network to be available to participating institutions in the first half of 2027 <a href="https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative" class="cite" data-src="S01">S01</a>.</p>
+<p>The initiative was first unveiled in June 2026 as a bank-led effort that TCH operates <a href="https://www.theclearinghouse.org/payment-systems/Articles/2026/06/Major-Financial-Institutions-Unveil-Bank-Led-On-Chain-Money-Initiative" class="cite" data-src="S04">S04</a>. Quant also says it will offer a shared Tokenised Deposits-as-a-Service platform to US institutions that process through TCH but do not yet have tokenised deposit capability <a href="https://quant.network/press-releases/the-clearing-house-partners-with-quant-to-advance-the-on-chain-money-initiative/" class="cite" data-src="S02">S02</a>.</p>
+</div>
+<div class="panel panel-analysis" data-status="analysis">
+<p><span class="panel-label">Analysis</span></p>
+<p>For Redbelly, the announcement matters indirectly. It shows a major US bank network choosing Quant's software as its connective layer. If Overledger becomes common plumbing for banks, the chains that Overledger can reach may become easier for those banks to reach. That is why the community is asking. It does not mean that TCH's network will connect to Redbelly, or to any public chain.</p>
+</div>
+<div class="panel panel-unknown" data-status="unknown">
+<p><span class="panel-label">Unknown</span></p>
+<p>The announcements we reviewed do not say which blockchains the On-Chain Money network will run on, or whether it will connect to public chains at all <a href="https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative" class="cite" data-src="S01">S01</a> <a href="https://quant.network/press-releases/the-clearing-house-partners-with-quant-to-advance-the-on-chain-money-initiative/" class="cite" data-src="S02">S02</a> <a href="https://quant.network/news/quant-powers-the-clearing-houses-on-chain-money-initiative-in-the-us/" class="cite" data-src="S03">S03</a>. Whether banks on that network could ever reach assets on Redbelly is therefore unknown.</p>
+</div>
+</section>
+<section id="overledger" class="level2">
+<h2 data-split><span class="h-num">04</span>Overledger in plain words</h2>
+<div class="panel panel-confirmed" data-status="confirmed">
+<p><span class="panel-label">Confirmed</span></p>
+<p>Overledger is Quant's platform for building applications that span more than one blockchain. It gives developers one set of credentials and one API across networks <a href="https://docs.overledger.dev/docs/start-here" class="cite" data-src="S05">S05</a>. Its documentation describes these building blocks:</p>
+<ul>
+<li><strong>Gateway.</strong> The front door. It checks who is calling, routes each request to a Connector or to the Fusion Rollup, applies rate limits and runs multi-step workflows called Flow Applications <a href="https://docs.overledger.dev/docs/overview" class="cite" data-src="S06">S06</a>.</li>
+<li><strong>Connectors.</strong> Adapters that speak each blockchain's own language. To a developer they look like one multi-DLT RPC endpoint. Behind it, each family of blockchains has its own pool of nodes, made up of nodes Quant runs and nodes that customers register <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>.</li>
+<li><strong>Overledger Firewall.</strong> Access control in two layers: an off-chain check of whether a user may reach a network, and an on-chain Fusion Firewall that allowlists addresses for contract calls, cross-chain messages and token bridging <a href="https://docs.overledger.dev/docs/overledger-firewall" class="cite" data-src="S10">S10</a>.</li>
+<li><strong>Fusion Rollup.</strong> A rollup built as a fork of the OP Stack that anchors to several base chains at once, giving one EVM-compatible environment across them <a href="https://docs.overledger.dev/docs/fusion-rollup" class="cite" data-src="S11">S11</a>.</li>
+<li><strong>Signer.</strong> Signing runs through a Signer Flow App. Either the customer holds the keys and signs, or Quant holds them (a testnet hot wallet, or a contracted mainnet KMS or HSM). The Gateway never sees private keys <a href="https://docs.overledger.dev/docs/signing" class="cite" data-src="S09">S09</a>.</li>
+<li><strong>Quant Connect.</strong> The portal users sign in to. Signing in gives the token used to create API keys <a href="https://docs.overledger.dev/docs/authentication" class="cite" data-src="S08">S08</a>, and Quant Connect hosts the bridge flow, which deploys a destination token contract and returns a Bridge ID <a href="https://docs.overledger.dev/docs/set-a-unilateral-bridge" class="cite" data-src="S12">S12</a>.</li>
+</ul>
+<p>Overledger also documents webhooks for smart contract events <a href="https://docs.overledger.dev/docs/manage-webhooks-for-smart-contract-events-1" class="cite" data-src="S14">S14</a> and publishes a full API reference <a href="https://docs.overledger.dev/reference" class="cite" data-src="S13">S13</a>.</p>
+</div>
+<figure class="dg dg-stack" data-diagram="stack">
+  <figcaption><span class="dg-title">How Overledger is put together</span><span class="dg-cite"><a class="cite" href="https://docs.overledger.dev/docs/start-here" data-src="S05">S05</a><a class="cite" href="https://docs.overledger.dev/docs/overview" data-src="S06">S06</a><a class="cite" href="https://docs.overledger.dev/docs/connectors" data-src="S07">S07</a><a class="cite" href="https://docs.overledger.dev/docs/overledger-firewall" data-src="S10">S10</a><a class="cite" href="https://docs.overledger.dev/docs/fusion-rollup" data-src="S11">S11</a></span></figcaption>
+  <div class="dg-body">
+    <div class="st-row st-clients">
+      <span class="st-tag">Who calls</span>
+      <div class="st-chips"><span>Your application</span><span>Quant Connect portal</span><span>Back-end services</span></div>
+    </div>
+    <div class="st-flow" aria-hidden="true"></div>
+    <div class="st-row st-gateway">
+      <span class="st-tag">Gateway</span>
+      <div class="st-chips"><span>Authentication</span><span>Routing</span><span>Rate limits</span><span>Flow Applications</span><span>Firewall: may this user reach this network?</span></div>
+    </div>
+    <div class="st-flow st-flow-split" aria-hidden="true"></div>
+    <div class="st-split">
+      <div class="st-row st-connectors">
+        <span class="st-tag">Connectors</span>
+        <p class="st-sub">Self-serve families</p>
+        <div class="st-chips"><span class="hot">EVM</span><span>Solana</span><span>Cosmos</span><span>SUI</span><span>Hedera</span><span>Aptos</span></div>
+        <p class="st-sub">Managed engagement, for example</p>
+        <div class="st-chips"><span>Hyperledger Fabric</span><span>R3 Corda</span><span>Canton</span><span>Besu (permissioned)</span><span>Quorum</span></div>
+        <div class="st-ghost"><span class="mk mk-open"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.6 6a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="12.6" r="1.1" fill="currentColor"/></svg><span>Redbelly is EVM-compatible but not listed</span></span></div>
+      </div>
+      <div class="st-row st-fusion">
+        <span class="st-tag">Fusion Rollup</span>
+        <p class="st-sub">OP Stack fork anchored to several base chains</p>
+        <div class="st-chips"><span>Deposit</span><span>Unify</span><span>Trigger</span><span>Withdraw or mint</span></div>
+        <p class="st-sub">Base chains at testnet launch</p>
+        <div class="st-chips"><span>Ethereum Sepolia</span><span>Polygon Amoy</span><span>Quant Besu testnet</span></div>
+        <p class="st-sub">Fusion Firewall: address allowlists, mirrored on each base chain</p>
+      </div>
+    </div></div>
+  <p class="dg-note">Simplified from Quant's documentation. Redbelly is shown where an EVM network would sit; it is not listed today.</p>
+</figure>
+<section id="how-chains-connect" class="level3">
+<h3>How a chain gets connected today</h3>
+<div class="panel panel-confirmed" data-status="confirmed">
+<p><span class="panel-label">Confirmed</span></p>
+<p>Overledger's documentation describes two routes onto its Connectors <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>:</p>
+<ol type="1">
+<li><strong>Self-serve.</strong> For public, permissionless networks in six families: EVM, Solana, Cosmos, SUI, Hedera and Aptos. An account can add its own node to a network Overledger already lists, or add a network Overledger does not list yet, as long as the network belongs to a self-serve family. The first <code>POST /nodes</code> call registers both the new network and the node, and the network then becomes available to Overledger users. Each node is either public, which is only allowed from whitelisted providers, or private, which can come from any domain <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>.</li>
+<li><strong>Managed engagement.</strong> For permissioned and consortium networks, and for new blockchain families, worked through with Quant's team. Named examples include Hyperledger Fabric, R3 Corda, Canton Network, permissioned Hyperledger Besu and Quorum. The documentation says that a network exposing RPC over HTTPS with bearer or API-key authentication can normally be onboarded <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>.</li>
+</ol>
+<p>The Gateway blocks administrative RPC methods; for EVM networks the examples are <code>personal_*</code>, <code>admin_*</code> and <code>txpool_*</code> <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>. Each network has a visibility of public, permissioned or private, and the live list of networks comes from the API (<code>GET /networks</code>), not from a fixed page <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>. For permissioned networks, the Firewall only lets through users who are on that network's allowlist <a href="https://docs.overledger.dev/docs/overledger-firewall" class="cite" data-src="S10">S10</a>.</p>
+<p>Fusion Rollup has its own set of connected base chains. At testnet launch they were Ethereum Sepolia, Polygon Amoy and a Quant-run permissioned Besu testnet <a href="https://docs.overledger.dev/docs/fusion-rollup" class="cite" data-src="S11">S11</a>. Fusion's building blocks are deposit, unify, trigger and withdraw or mint, which cover moving value and calling contracts across chains <a href="https://docs.overledger.dev/docs/fusion-rollup" class="cite" data-src="S11">S11</a>. To send a cross-chain message, a sender on a connected chain must be allowlisted for the specific rollup contract it wants to reach, and the firewall is locked down on mainnet while being more permissive on testnet <a href="https://docs.overledger.dev/docs/fusion-rollup" class="cite" data-src="S11">S11</a>. Quant's own documentation lists the known risks of bridges built as separate contracts: lock-and-mint mismatches, custodian compromise and oracle failure <a href="https://docs.overledger.dev/docs/fusion-rollup" class="cite" data-src="S11">S11</a>.</p>
+</div>
+<figure class="dg dg-routes" data-diagram="routes">
+  <figcaption><span class="dg-title">Redbelly against each Overledger route</span><span class="dg-cite"><a class="cite" href="https://docs.overledger.dev/docs/connectors" data-src="S07">S07</a><a class="cite" href="https://docs.overledger.dev/docs/fusion-rollup" data-src="S11">S11</a><a class="cite" href="https://vine.redbelly.network/environments/" data-src="S22">S22</a><a class="cite" href="https://vine.redbelly.network/sc-smart-contracts" data-src="S24">S24</a><a class="cite" href="https://redbelly.network/blog/devnet" data-src="S29">S29</a></span></figcaption>
+  <div class="dg-body"><div class="rt-grid">
+      
+      <div class="rt-col">
+        <h4>Self-serve</h4>
+        <p class="rt-sub">Account registers a node with POST /nodes</p>
+        <ul><li><span class="mk mk-fits"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Family must be self-serve</span></span><span class="rt-fact">Redbelly runs EVM contracts; EVM is self-serve</span></li><li><span class="mk mk-miss"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Network should be public and permissionless</span></span><span class="rt-fact">Redbelly is open to read but only verified accounts can write</span></li><li><span class="mk mk-fits"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Private node from any domain</span></span><span class="rt-fact">Redbelly publishes a public RPC address</span></li><li><span class="mk mk-open"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.6 6a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="12.6" r="1.1" fill="currentColor"/></svg><span>Public node only from whitelisted providers</span></span><span class="rt-fact">Whether any whitelisted provider serves Redbelly</span></li></ul>
+        <p class="rt-verdict">Thin link possible on paper. Untested.</p>
+      </div>
+      
+      <div class="rt-col">
+        <h4>Managed engagement</h4>
+        <p class="rt-sub">Worked through with Quant's team</p>
+        <ul><li><span class="mk mk-fits"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>For permissioned or consortium networks</span></span><span class="rt-fact">Identity-gated writing resembles a permissioned network</span></li><li><span class="mk mk-fits"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>RPC over HTTPS</span></span><span class="rt-fact">Redbelly publishes HTTPS RPC addresses</span></li><li><span class="mk mk-open"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.6 6a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="12.6" r="1.1" fill="currentColor"/></svg><span>Quant chooses to take it on</span></span><span class="rt-fact">Nothing public either way</span></li></ul>
+        <p class="rt-verdict">Route to a full listing. Needs Quant.</p>
+      </div>
+      
+      <div class="rt-col">
+        <h4>Fusion Rollup</h4>
+        <p class="rt-sub">Redbelly as a base chain</p>
+        <ul><li><span class="mk mk-miss"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Listed as a connected base chain</span></span><span class="rt-fact">Testnet launch: Sepolia, Amoy, Quant Besu</span></li><li><span class="mk mk-miss"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Documented self-serve way to join</span></span><span class="rt-fact">None found</span></li><li><span class="mk mk-open"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.6 6a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="12.6" r="1.1" fill="currentColor"/></svg><span>Steps, cost and timeline</span></span><span class="rt-fact">Not public</span></li></ul>
+        <p class="rt-verdict">Not possible yet.</p>
+      </div>
+    </div></div>
+  <p class="dg-note">Each line compares a documented Overledger rule with a documented Redbelly fact. The verdict on each line is our analysis.</p>
+</figure>
+<div class="panel panel-unknown" data-status="unknown">
+<p><span class="panel-label">Unknown</span></p>
+<p>We did not find a documented self-serve way to add a new base chain to Fusion Rollup. The pages we reviewed describe which chains Fusion connected, not how a chain is added <a href="https://docs.overledger.dev/docs/fusion-rollup" class="cite" data-src="S11">S11</a>.</p>
+</div>
+</section>
+</section>
+<section id="redbelly" class="level2">
+<h2 data-split><span class="h-num">05</span>Redbelly, in the terms that matter here</h2>
+<div class="panel panel-confirmed" data-status="confirmed">
+<p><span class="panel-label">Confirmed</span></p>
+<ul>
+<li><strong>Purpose.</strong> Redbelly describes itself as a layer 1 blockchain built for real world asset tokenisation <a href="https://docs.redbelly.network/" class="cite" data-src="S15">S15</a>.</li>
+<li><strong>EVM base.</strong> Redbelly executes smart contracts written for the EVM in Solidity <a href="https://vine.redbelly.network/sc-smart-contracts" class="cite" data-src="S24">S24</a>. Mainnet is chain ID 151 and Testnet is chain ID 153, and Redbelly publishes a public RPC address for each <a href="https://vine.redbelly.network/environments/" class="cite" data-src="S22">S22</a>.</li>
+<li><strong>Consensus.</strong> Redbelly uses DBFT, a leaderless Byzantine fault tolerant consensus algorithm, together with a "super block" optimisation of the EVM. Its developer portal credits these two for the network's security, finality and scalability <a href="https://vine.redbelly.network/consensus/" class="cite" data-src="S23">S23</a>.</li>
+<li><strong>Fees.</strong> The unit price of gas is fixed in US dollar terms and converted to RBNT at execution through an on-chain price oracle <a href="https://vine.redbelly.network/network-fees/" class="cite" data-src="S25">S25</a>.</li>
+<li><strong>Identity before writing.</strong> Receptor is Redbelly's identity and verifiable credential protocol, built on the W3C verifiable credential data model <a href="https://docs.redbelly.network/pages/receptor/" class="cite" data-src="S16">S16</a>. Only accredited issuers can issue the credentials that give network access <a href="https://docs.redbelly.network/pages/receptor/" class="cite" data-src="S16">S16</a> <a href="https://docs.redbelly.network/pages/modules/issuer/" class="cite" data-src="S17">S17</a>. Users must claim an access credential from an accredited issuer before they can enable their accounts with write access <a href="https://redbelly.network/blog/devnet" class="cite" data-src="S29">S29</a>. The accredited issuer named in the Redbelly access app is Averer, which verifies identity before issuing the Redbelly Network Access Credential <a href="https://access.redbelly.network/" class="cite" data-src="S28">S28</a>. Users prove a photo identity document through biometric checks <a href="https://vine.redbelly.network/id-accessing-the-network" class="cite" data-src="S27">S27</a> <a href="https://github.com/tycayomide/redbelly-testnet-bridge/blob/main/ARTICLE.md" class="cite" data-src="S36">S36</a>. Community builders report that unverified wallets cannot send any transaction ("Sender not authorised to write transactions") and that Mainnet and Testnet approvals are separate <a href="https://github.com/tycayomide/redbelly-testnet-bridge/blob/main/ARTICLE.md" class="cite" data-src="S36">S36</a>.</li>
+<li><strong>Institutions.</strong> Companies and trusts can register through Redbelly's Business verification process <a href="https://vine.redbelly.network/nodes/operator-guide/" class="cite" data-src="S30">S30</a>.</li>
+<li><strong>Existing cross-chain routes.</strong> Redbelly's developer portal lists routes for RBNT to Base via LayerZero and to Ethereum mainnet via Polymer, and points to Lucid Labs Bridge for moving RBNT back to Redbelly <a href="https://vine.redbelly.network/native-currency/" class="cite" data-src="S26">S26</a>. Celer's cBridge connects Redbelly with Ethereum and BNB Chain using a pegged bridge model <a href="https://blog.celer.network/2025/08/01/celer-announces-cbridge-support-for-redbelly/" class="cite" data-src="S32">S32</a>. Redbelly announced Wrapped RBNT on Ethereum at contract <code>0xb45ffb51984d626ee758b336c61cf20990c6bf13</code> <a href="https://x.com/RedbellyNetwork/status/1890340030197166112" class="cite" data-src="S33">S33</a>. LayerZero lists Redbelly Mainnet among its V2 deployments <a href="https://docs.layerzero.network/v2/deployments/deployed-contracts" class="cite" data-src="S34">S34</a>.</li>
+<li><strong>Community bridges.</strong> A winning DAO Task Board entry is a reference bridge that moves ETH from Ethereum Sepolia to Redbelly Testnet using lock-and-mint with a 2-of-3 relayer set <a href="https://github.com/Redbelly-DAO-Community-Taskboard/TASK-08-bridge-integration-guide" class="cite" data-src="S35">S35</a>. A DAO recovery playbook documents how bridged RBNT can get stuck, for example Polymer transfers to Ethereum that need to be relayed by hand <a href="https://github.com/Redbelly-DAO-Community-Taskboard/TASK-16-cross-chain-recovery-playbook" class="cite" data-src="S37">S37</a>.</li>
+</ul>
+</div>
+<div class="panel panel-analysis" data-status="analysis">
+<p><span class="panel-label">Analysis</span></p>
+<p>Two facts carry most of the weight for this question.</p>
+<p>First, Redbelly speaks the same EVM language as Overledger's largest self-serve family. Connecting Redbelly to outside systems is also not new: LayerZero, Polymer, Celer and Lucid Labs already do it <a href="https://vine.redbelly.network/native-currency/" class="cite" data-src="S26">S26</a> <a href="https://blog.celer.network/2025/08/01/celer-announces-cbridge-support-for-redbelly/" class="cite" data-src="S32">S32</a> <a href="https://docs.layerzero.network/v2/deployments/deployed-contracts" class="cite" data-src="S34">S34</a>. That shows Redbelly's EVM base works with mainstream cross-chain tooling. It says nothing about Overledger specifically.</p>
+<p>Second, Redbelly is open to read through its public RPC but gated to write: every sending account must be identity-verified <a href="https://vine.redbelly.network/environments/" class="cite" data-src="S22">S22</a> <a href="https://redbelly.network/blog/devnet" class="cite" data-src="S29">S29</a>. Overledger sorts networks into public, permissionless ones (self-serve) and permissioned ones (engagement) <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>. Redbelly does not sit cleanly in either box. How Quant would classify it is the first practical question any connection would face.</p>
+</div>
+</section>
+<section id="connect-now" class="level2">
+<h2 data-split><span class="h-num">06</span>Can Redbelly connect now?</h2>
+<p>Each Overledger route is tested below against what Redbelly's public documentation says.</p>
+<section id="route-self-serve" class="level3">
+<h3>Route 1: self-serve node registration</h3>
+<div class="panel panel-confirmed" data-status="confirmed">
+<p><span class="panel-label">Confirmed</span></p>
+<p>Self-serve onboarding covers networks that Overledger does not list yet, if their family is supported, and EVM is a supported family <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>. Redbelly runs EVM contracts <a href="https://vine.redbelly.network/sc-smart-contracts" class="cite" data-src="S24">S24</a>. A private node can be added from any domain; a public node only from a whitelisted provider <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>.</p>
+</div>
+<div class="panel panel-analysis" data-status="analysis">
+<p><span class="panel-label">Analysis</span></p>
+<p>On paper, an Overledger account holder could register a Redbelly RPC endpoint as a private node and reach Redbelly through Overledger's RPC interface. That would be a thin link at the <strong>Reach</strong> depth: the account could read Redbelly data and pass through transactions that a Redbelly-verified account had already signed, using the same credentials it uses for other networks. A listing visible to every Overledger user would also need a public node from a provider Quant has whitelisted. Even a working thin link would not change Redbelly's rule that only verified accounts can write <a href="https://redbelly.network/blog/devnet" class="cite" data-src="S29">S29</a> <a href="https://github.com/tycayomide/redbelly-testnet-bridge/blob/main/ARTICLE.md" class="cite" data-src="S36">S36</a>. Overledger would only carry the transaction.</p>
+</div>
+<div class="panel panel-unknown" data-status="unknown">
+<p><span class="panel-label">Unknown</span></p>
+<ul>
+<li>Whether Quant would accept an identity-gated chain on the self-serve route at all, since that route is described as being for public, permissionless networks <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>.</li>
+<li>Whether Overledger's EVM Connector works with Redbelly unchanged: its node health checks, its handling of Redbelly's dollar-fixed gas <a href="https://vine.redbelly.network/network-fees/" class="cite" data-src="S25">S25</a>, and its handling of Redbelly blocks. No test has been published, and this research did not run one.</li>
+<li>Which node providers Quant has whitelisted, and whether any of them serves Redbelly.</li>
+<li>Whether Redbelly already appears in Overledger's live network list. That list is only available through the API with an account <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>.</li>
+</ul>
+</div>
+</section>
+<section id="route-engagement" class="level3">
+<h3>Route 2: managed engagement</h3>
+<div class="panel panel-confirmed" data-status="confirmed">
+<p><span class="panel-label">Confirmed</span></p>
+<p>Quant's documentation uses managed engagement for permissioned and consortium networks and for new families, and says a network with HTTPS RPC and bearer or API-key authentication can normally be onboarded <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>.</p>
+</div>
+<div class="panel panel-analysis" data-status="analysis">
+<p><span class="panel-label">Analysis</span></p>
+<p>Redbelly's public RPC fits the transport part of that description <a href="https://vine.redbelly.network/environments/" class="cite" data-src="S22">S22</a>. An engagement is the route by which Redbelly could become a fully listed network with Quant-run nodes, firewall settings and Quant support. It needs Quant to choose to do it. Nothing public says that such work exists or is being considered.</p>
+</div>
+</section>
+<section id="route-fusion" class="level3">
+<h3>Route 3: Fusion Rollup</h3>
+<div class="panel panel-confirmed" data-status="confirmed">
+<p><span class="panel-label">Confirmed</span></p>
+<p>Fusion connected Ethereum Sepolia, Polygon Amoy and a Quant-run Besu testnet at launch <a href="https://docs.overledger.dev/docs/fusion-rollup" class="cite" data-src="S11">S11</a>. Fusion Firewall policies are mirrored inside the rollup and on each connected base chain <a href="https://docs.overledger.dev/docs/overview" class="cite" data-src="S06">S06</a>.</p>
+</div>
+<div class="panel panel-analysis" data-status="analysis">
+<p><span class="panel-label">Analysis</span></p>
+<p>Joining Fusion would mean deploying Fusion's base-chain contracts on Redbelly and wiring Redbelly into the rollup's deposit and messaging paths. Those contracts, and every address that deposits or withdraws through them, would need Redbelly write access <a href="https://redbelly.network/blog/devnet" class="cite" data-src="S29">S29</a>. This would be a project led by Quant, with parties on Redbelly taking part. It is not something the community can switch on.</p>
+</div>
+<div class="panel panel-unknown" data-status="unknown">
+<p><span class="panel-label">Unknown</span></p>
+<p>No public source describes the steps, cost or timeline for adding a base chain to Fusion Rollup.</p>
+</div>
+</section>
+<section id="verdict" class="level3">
+<h3>Verdict</h3>
+<div class="panel panel-analysis" data-status="analysis">
+<p><span class="panel-label">Analysis</span></p>
+<p><strong>Not connected today.</strong> A thin <strong>Reach</strong> link through the self-serve route looks possible on paper, but it is untested and depends on how Quant classifies Redbelly. <strong>Orchestrate</strong> and <strong>Move</strong> (Quant-held signing, the bridge flow, Fusion Rollup) are not possible yet unless Quant chooses to support Redbelly.</p>
+</div>
+</section>
+</section>
+<section id="the-work" class="level2">
+<h2 data-split><span class="h-num">07</span>What a connection would take</h2>
+<p>The table lists the work in the order it would happen, in plain words. Who acts is our analysis of the documented roles. It does not describe any actual plan.</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>In plain words</th>
+<th>Who would have to act</th>
+<th>Depends on</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Pick the route</td>
+<td>Choose between a thin self-serve link, a full listing through an engagement, or Fusion Rollup <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a> <a href="https://docs.overledger.dev/docs/fusion-rollup" class="cite" data-src="S11">S11</a></td>
+<td>An Overledger account holder, or Quant</td>
+<td>How Quant classifies an identity-gated chain</td>
+</tr>
+<tr class="even">
+<td>2. Provide a node</td>
+<td>Someone runs or supplies a Redbelly RPC endpoint that Overledger calls. A public listing needs a whitelisted provider <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a></td>
+<td>A node operator or provider, and Quant</td>
+<td>Quant's provider whitelist</td>
+</tr>
+<tr class="odd">
+<td>3. Verify every sender</td>
+<td>Every address that signs Redbelly transactions needs a Redbelly access credential <a href="https://redbelly.network/blog/devnet" class="cite" data-src="S29">S29</a>; companies can use Business verification <a href="https://vine.redbelly.network/nodes/operator-guide/" class="cite" data-src="S30">S30</a></td>
+<td>The institution, an accredited issuer, and Quant if Quant holds keys <a href="https://docs.overledger.dev/docs/signing" class="cite" data-src="S09">S09</a></td>
+<td>Redbelly's access process</td>
+</tr>
+<tr class="even">
+<td>4. Test the fit</td>
+<td>Run the Connector against Redbelly Testnet (chain ID 153) <a href="https://vine.redbelly.network/environments/" class="cite" data-src="S22">S22</a>: reads, signed writes, rejections for unverified senders, fees, contract event webhooks <a href="https://docs.overledger.dev/docs/manage-webhooks-for-smart-contract-events-1" class="cite" data-src="S14">S14</a></td>
+<td>Quant engineers, with Redbelly developers</td>
+<td>An Overledger account and verified test accounts</td>
+</tr>
+<tr class="odd">
+<td>5. Decide how assets move</td>
+<td>Keep assets on Redbelly and move instructions, or represent them on other chains through a bridge or Fusion <a href="https://docs.overledger.dev/docs/fusion-rollup" class="cite" data-src="S11">S11</a> <a href="https://docs.overledger.dev/docs/set-a-unilateral-bridge" class="cite" data-src="S12">S12</a></td>
+<td>Asset issuers and Quant</td>
+<td>The compliance design in the next section</td>
+</tr>
+<tr class="even">
+<td>6. Map compliance</td>
+<td>Line up Overledger's allowlists <a href="https://docs.overledger.dev/docs/overledger-firewall" class="cite" data-src="S10">S10</a> with Redbelly eligibility <a href="https://docs.redbelly.network/pages/receptor/" class="cite" data-src="S16">S16</a> <a href="https://docs.redbelly.network/pages/eligibility-sdk/configure-eligibility-criteria/" class="cite" data-src="S21">S21</a>, including what happens when someone stops being eligible</td>
+<td>Issuers, Quant and Redbelly</td>
+<td>Legal and product decisions</td>
+</tr>
+<tr class="odd">
+<td>7. Agree terms</td>
+<td>Commercial, legal and support arrangements between whoever would run it</td>
+<td>The parties involved</td>
+<td>Not public</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="dg dg-depths" data-diagram="depths">
+  <figcaption><span class="dg-title">Three depths of connection</span><span class="dg-cite"><a class="cite" href="https://docs.overledger.dev/docs/connectors" data-src="S07">S07</a><a class="cite" href="https://docs.overledger.dev/docs/signing" data-src="S09">S09</a><a class="cite" href="https://docs.overledger.dev/docs/fusion-rollup" data-src="S11">S11</a><a class="cite" href="https://docs.overledger.dev/docs/set-a-unilateral-bridge" data-src="S12">S12</a></span></figcaption>
+  <div class="dg-body"><div class="dp-track">
+      
+      <div class="dp-card dp-1">
+        <span class="dp-n">01</span>
+        <h4>Reach</h4>
+        <p>Overledger reads Redbelly and carries transactions that verified Redbelly accounts have already signed.</p>
+        <ul><li>A Redbelly node registered with Overledger</li><li>Quant accepting the network</li><li>Senders verified on Redbelly</li></ul>
+        <span class="chip chip-analysis">Possible on paper</span>
+      </div>
+      
+      <div class="dp-card dp-2">
+        <span class="dp-n">02</span>
+        <h4>Orchestrate</h4>
+        <p>Overledger tools act on Redbelly: workflows, Quant-held signing, contract webhooks.</p>
+        <ul><li>Quant supporting Redbelly in those tools</li><li>Signing addresses verified on Redbelly</li><li>Testing on chain ID 153</li></ul>
+        <span class="chip chip-unknown">Needs Quant</span>
+      </div>
+      
+      <div class="dp-card dp-3">
+        <span class="dp-n">03</span>
+        <h4>Move</h4>
+        <p>Assets or messages travel between Redbelly and other chains through Overledger.</p>
+        <ul><li>Bridge flow or Fusion support for Redbelly</li><li>Eligibility carried across chains</li><li>Contracts with Redbelly write access</li></ul>
+        <span class="chip chip-no">Not possible yet</span>
+      </div>
+    </div></div>
+  <p class="dg-note">Our framework for this report, not Quant terminology.</p>
+</figure>
+<div class="panel panel-analysis" data-status="analysis">
+<p><span class="panel-label">Analysis</span></p>
+<p>Steps 1 to 4 are enough for a <strong>Reach</strong> link. Steps 5 and 6 are where most of the real effort would go, because they decide whether a Redbelly asset keeps its protections once it touches another chain. Step 3 is specific to Redbelly: on most EVM chains any funded address can send transactions, but on Redbelly every signing address is an identity decision as well as a technical one <a href="https://redbelly.network/blog/devnet" class="cite" data-src="S29">S29</a> <a href="https://github.com/tycayomide/redbelly-testnet-bridge/blob/main/ARTICLE.md" class="cite" data-src="S36">S36</a>.</p>
+</div>
+</section>
+<section id="offer" class="level2">
+<h2 data-split><span class="h-num">08</span>What it could offer institutions</h2>
+<div class="panel panel-analysis" data-status="analysis">
+<p><span class="panel-label">Analysis</span></p>
+<p><strong>For institutions that already use Overledger:</strong></p>
+<ul>
+<li><strong>One integration.</strong> Redbelly would sit behind the same credentials and API as their other networks <a href="https://docs.overledger.dev/docs/start-here" class="cite" data-src="S05">S05</a> <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>, instead of needing its own integration.</li>
+<li><strong>Workflows across chains.</strong> Overledger's Flow Applications and smart contract webhooks <a href="https://docs.overledger.dev/docs/overview" class="cite" data-src="S06">S06</a> <a href="https://docs.overledger.dev/docs/manage-webhooks-for-smart-contract-events-1" class="cite" data-src="S14">S14</a> could tie a step on Redbelly to steps elsewhere, for example releasing a payment on one network when a Tokeniser asset changes hands on Redbelly. This needs Quant to support Redbelly in those tools.</li>
+<li><strong>Custody choices.</strong> The Signer supports self-custody or Quant-held keys in a KMS or HSM <a href="https://docs.overledger.dev/docs/signing" class="cite" data-src="S09">S09</a>, which suits institutions with different custody policies, as long as every signing address is Redbelly-verified <a href="https://redbelly.network/blog/devnet" class="cite" data-src="S29">S29</a>.</li>
+</ul>
+<p><strong>For institutions using Redbelly:</strong></p>
+<ul>
+<li><strong>A possible route toward bank networks that standardise on Quant</strong>, if those networks ever connect to public chains. Today that condition is unknown <a href="https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative" class="cite" data-src="S01">S01</a>.</li>
+<li><strong>Redbelly's own features would come along</strong>: identity-verified counterparties <a href="https://docs.redbelly.network/pages/receptor/" class="cite" data-src="S16">S16</a> <a href="https://redbelly.network/blog/devnet" class="cite" data-src="S29">S29</a>, fees fixed in dollar terms that make costs predictable <a href="https://vine.redbelly.network/network-fees/" class="cite" data-src="S25">S25</a>, and leaderless BFT consensus <a href="https://vine.redbelly.network/consensus/" class="cite" data-src="S23">S23</a>. These are the qualities institutions would be weighing when they choose where to issue.</li>
+</ul>
+<p><strong>What it would not offer:</strong></p>
+<ul>
+<li><strong>Compliance does not travel automatically.</strong> Overledger's Firewall controls which users and addresses may act <a href="https://docs.overledger.dev/docs/overledger-firewall" class="cite" data-src="S10">S10</a>. Redbelly's controls decide who may hold and move assets on Redbelly <a href="https://redbelly.network/blog/devnet" class="cite" data-src="S29">S29</a> <a href="https://tokeniser.com/" class="cite" data-src="S31">S31</a>. They are separate systems, and nothing links them today.</li>
+<li><strong>No access to TCH's network follows from it.</strong> That network's participants and ledgers are TCH's decision <a href="https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative" class="cite" data-src="S01">S01</a> <a href="https://www.theclearinghouse.org/payment-systems/Articles/2026/06/Major-Financial-Institutions-Unveil-Bank-Led-On-Chain-Money-Initiative" class="cite" data-src="S04">S04</a>.</li>
+<li><strong>A new dependency.</strong> Institutions would rely on a third-party platform whose terms for such a connection are not public.</li>
+</ul>
+</div>
+</section>
+<section id="compliance" class="level2">
+<h2 data-split><span class="h-num">09</span>Credentials and assets across chains</h2>
+<p>This section explains how Redbelly's compliance tools work today, and where they could stop working once an asset or a claim on it leaves Redbelly.</p>
+<div class="panel panel-confirmed" data-status="confirmed">
+<p><span class="panel-label">Confirmed</span></p>
+<ul>
+<li><strong>Receptor credentials</strong> are W3C verifiable credentials. An issuer issues them, the user (the holder) keeps them, and a verifier checks them <a href="https://docs.redbelly.network/pages/receptor/" class="cite" data-src="S16">S16</a>.</li>
+<li><strong>Proof by Query</strong> checks a zero-knowledge proof in a verifier smart contract that the verifier deploys on Redbelly Network. The user submits the proof to that contract, and the verifier never sees or stores the personal data <a href="https://docs.redbelly.network/pages/methods/proof-by-query/" class="cite" data-src="S18">S18</a>. <strong>Selective Disclosure</strong> reveals chosen facts off-chain instead <a href="https://docs.redbelly.network/pages/methods/selective-disclosure/" class="cite" data-src="S19">S19</a>.</li>
+<li><strong>Eligibility rules</strong> are queries over credential types such as passport, proof of address and AML/CTF credentials. On-chain checks currently support single queries, with multi-query planned <a href="https://docs.redbelly.network/pages/eligibility-sdk/configure-eligibility-criteria/" class="cite" data-src="S21">S21</a>. Developers build them with the Eligibility SDK <a href="https://docs.redbelly.network/pages/eligibility-sdk/getting-started/" class="cite" data-src="S20">S20</a>.</li>
+<li><strong>Tokeniser</strong>, which runs on Redbelly, programs eligibility into every asset: identity, KYC, AML, CTF, wholesale and sophisticated investor tests, and target market determination (TMD). Every holder is verified and every transfer is checked against the asset's rules <a href="https://tokeniser.com/" class="cite" data-src="S31">S31</a>.</li>
+<li><strong>Overledger's Fusion Firewall</strong> allowlists on-chain addresses; Overledger maps users to their authorised addresses off-chain <a href="https://docs.overledger.dev/docs/overledger-firewall" class="cite" data-src="S10">S10</a>, and policies are mirrored on each connected base chain <a href="https://docs.overledger.dev/docs/overview" class="cite" data-src="S06">S06</a>.</li>
+</ul>
+</div>
+<figure class="dg dg-journey" data-diagram="journey">
+  <figcaption><span class="dg-title">What happens to a Tokeniser asset's checks when it leaves Redbelly</span><span class="dg-cite"><a class="cite" href="https://docs.overledger.dev/docs/fusion-rollup" data-src="S11">S11</a><a class="cite" href="https://docs.redbelly.network/pages/methods/proof-by-query/" data-src="S18">S18</a><a class="cite" href="https://tokeniser.com/" data-src="S31">S31</a></span></figcaption>
+  <div class="dg-body"><div class="jr-lanes">
+      <div class="jr-head"><span></span><span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.8l5 2v3.6c0 3.2-2.1 5.6-5 6.8-2.9-1.2-5-3.6-5-6.8V3.8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg> On Redbelly</span><span>On another chain</span></div>
+      <div class="jr-stop" style="--i:0">
+            <span class="jr-name"><b>01</b>Holding</span>
+            <span class="jr-here"><span class="mk mk-fits"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Every holder verified</span></span></span>
+            <span class="jr-there"><span class="mk mk-open"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.6 6a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="12.6" r="1.1" fill="currentColor"/></svg><span>Only if the other chain checks</span></span></span>
+          </div><div class="jr-stop" style="--i:1">
+            <span class="jr-name"><b>02</b>Transferring</span>
+            <span class="jr-here"><span class="mk mk-fits"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Every transfer checked</span></span></span>
+            <span class="jr-there"><span class="mk mk-open"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.6 6a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="12.6" r="1.1" fill="currentColor"/></svg><span>Out of Redbelly's sight</span></span></span>
+          </div><div class="jr-stop" style="--i:2">
+            <span class="jr-name"><b>03</b>Proving identity</span>
+            <span class="jr-here"><span class="mk mk-fits"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>ZK proof checked on Redbelly</span></span></span>
+            <span class="jr-there"><span class="mk mk-open"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.6 6a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="12.6" r="1.1" fill="currentColor"/></svg><span>Needs the result relayed</span></span></span>
+          </div><div class="jr-stop" style="--i:3">
+            <span class="jr-name"><b>04</b>Losing eligibility</span>
+            <span class="jr-here"><span class="mk mk-fits"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Reflected on Redbelly</span></span></span>
+            <span class="jr-there"><span class="mk mk-open"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.6 6a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="12.6" r="1.1" fill="currentColor"/></svg><span>Copies must be updated</span></span></span>
+          </div><div class="jr-stop" style="--i:4">
+            <span class="jr-name"><b>05</b>Who holds the key</span>
+            <span class="jr-here"><span class="mk mk-fits"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>One verified account</span></span></span>
+            <span class="jr-there"><span class="mk mk-open"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.6 6a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="12.6" r="1.1" fill="currentColor"/></svg><span>Custodian or Quant-held key</span></span></span>
+          </div><div class="jr-stop" style="--i:5">
+            <span class="jr-name"><b>06</b>Bridge mechanics</span>
+            <span class="jr-here"><span class="mk mk-fits"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Not involved</span></span></span>
+            <span class="jr-there"><span class="mk mk-open"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.6 6a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="12.6" r="1.1" fill="currentColor"/></svg><span>Mint, custody and oracle risk</span></span></span>
+          </div><div class="jr-stop" style="--i:6">
+            <span class="jr-name"><b>07</b>Coming back</span>
+            <span class="jr-here"><span class="mk mk-fits"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Eligible recipient only</span></span></span>
+            <span class="jr-there"><span class="mk mk-open"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.6 6a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="12.6" r="1.1" fill="currentColor"/></svg><span>Can get stuck</span></span></span>
+          </div>
+    </div></div>
+  <p class="dg-note">On Redbelly the checks are documented. On the other side they exist only if a connection is built to carry them.</p>
+</figure>
+<div class="panel panel-analysis" data-status="analysis">
+<p><span class="panel-label">Analysis</span></p>
+<p>The checks above all run <strong>on Redbelly</strong>. A Receptor proof is checked by a contract on Redbelly <a href="https://docs.redbelly.network/pages/methods/proof-by-query/" class="cite" data-src="S18">S18</a>, and a Tokeniser transfer is checked by the asset's rules on Redbelly <a href="https://tokeniser.com/" class="cite" data-src="S31">S31</a>. Another chain, or a rollup, does not see those checks. It applies its own rules. So a connection either has to bring equivalent checks to the other side, or keep the asset where the checks are.</p>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th>Moment</th>
+<th>On Redbelly today</th>
+<th>Once it touches another chain</th>
+<th>Where it could break</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Holding</td>
+<td>Every holder is verified against the asset's rules <a href="https://tokeniser.com/" class="cite" data-src="S31">S31</a></td>
+<td>The other chain applies its own rules</td>
+<td>A wrapped token contract without the same checks lets anyone hold it</td>
+</tr>
+<tr class="even">
+<td>Transferring</td>
+<td>Every transfer is checked <a href="https://tokeniser.com/" class="cite" data-src="S31">S31</a></td>
+<td>Transfers of a wrapped token happen out of Redbelly's sight</td>
+<td>Secondary transfers skip eligibility entirely</td>
+</tr>
+<tr class="odd">
+<td>Proving identity</td>
+<td>A zero-knowledge proof is checked by a contract on Redbelly <a href="https://docs.redbelly.network/pages/methods/proof-by-query/" class="cite" data-src="S18">S18</a></td>
+<td>A contract elsewhere cannot read that result unless it is relayed</td>
+<td>Eligibility status goes stale, or is relayed wrongly</td>
+</tr>
+<tr class="even">
+<td>Losing eligibility</td>
+<td>Redbelly's own records reflect the change</td>
+<td>Any copy of the status held elsewhere must be updated as well</td>
+<td>A holder who is no longer eligible stays allowlisted elsewhere</td>
+</tr>
+<tr class="odd">
+<td>Who holds the key</td>
+<td>One verified account per holder <a href="https://redbelly.network/blog/devnet" class="cite" data-src="S29">S29</a></td>
+<td>The same asset may sit with a custodian, or behind a Quant-held key <a href="https://docs.overledger.dev/docs/signing" class="cite" data-src="S09">S09</a></td>
+<td>It is unclear whose identity stands behind the address</td>
+</tr>
+<tr class="even">
+<td>Bridge mechanics</td>
+<td>Not applicable</td>
+<td>Lock-and-mint, custody and oracles come into play</td>
+<td>Lock-and-mint mismatch, custodian compromise, oracle failure <a href="https://docs.overledger.dev/docs/fusion-rollup" class="cite" data-src="S11">S11</a></td>
+</tr>
+<tr class="odd">
+<td>Coming back</td>
+<td>Only an eligible address can receive</td>
+<td>Redeeming to Redbelly needs an eligible recipient</td>
+<td>Funds get stuck when the recipient is not verified, a failure the DAO playbook already covers for RBNT <a href="https://github.com/Redbelly-DAO-Community-Taskboard/TASK-16-cross-chain-recovery-playbook" class="cite" data-src="S37">S37</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<section id="designs" class="level3">
+<h3>Designs that would keep compliance intact</h3>
+<div class="panel panel-analysis" data-status="analysis">
+<p><span class="panel-label">Analysis</span></p>
+<p>Three designs follow from the facts above. They are options for discussion, not recommendations to any party.</p>
+<ol type="1">
+<li><strong>Keep the asset on Redbelly and move instructions.</strong> Overledger coordinates the workflow, but the asset never leaves Redbelly, so every transfer still passes Tokeniser's and Receptor's checks <a href="https://tokeniser.com/" class="cite" data-src="S31">S31</a> <a href="https://docs.redbelly.network/pages/methods/proof-by-query/" class="cite" data-src="S18">S18</a>. A payment leg could settle elsewhere. This carries the least compliance risk. It needs careful design so that both legs complete or neither does.</li>
+<li><strong>Represent the asset elsewhere, with eligibility mirrored.</strong> The destination contract only allows transfers between addresses on an allowlist that mirrors Redbelly eligibility. Overledger's address allowlists <a href="https://docs.overledger.dev/docs/overledger-firewall" class="cite" data-src="S10">S10</a> are one place such a mirror could live. It needs a trusted way to keep the mirror up to date when people stop being eligible.</li>
+<li><strong>Re-prove eligibility on the destination.</strong> The holder proves eligibility again on the other chain, using the same credential. Today Receptor's on-chain verification is documented on Redbelly <a href="https://docs.redbelly.network/pages/methods/proof-by-query/" class="cite" data-src="S18">S18</a>; whether verifier contracts and accredited-issuer trust could run on another chain is unknown.</li>
+</ol>
+</div>
+<div class="panel panel-unknown" data-status="unknown">
+<p><span class="panel-label">Unknown</span></p>
+<ul>
+<li>Whether Receptor verifier contracts, or the trust in accredited issuers, can be deployed on chains other than Redbelly.</li>
+<li>How Tokeniser would treat a representation of one of its assets on another chain. Tokeniser's public material describes checks on Redbelly only <a href="https://tokeniser.com/" class="cite" data-src="S31">S31</a>.</li>
+<li>Whether Overledger's allowlists could be fed by Redbelly eligibility automatically. The documentation describes allowlists managed by Overledger and by contract deployers <a href="https://docs.overledger.dev/docs/overledger-firewall" class="cite" data-src="S10">S10</a> <a href="https://docs.overledger.dev/docs/fusion-rollup" class="cite" data-src="S11">S11</a>, not by external credential systems.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="unknowns" class="level2">
+<h2 data-split><span class="h-num">10</span>Not possible yet, and unknown</h2>
+<div class="panel panel-confirmed" data-status="confirmed">
+<p><span class="panel-label">Confirmed</span></p>
+<p><strong>Not possible yet, based on public sources at the cut-off:</strong></p>
+<ul>
+<li>Using Redbelly as a listed Overledger network. Redbelly is not named in Overledger's documentation <a href="https://docs.overledger.dev/docs/start-here" class="cite" data-src="S05">S05</a> <a href="https://docs.overledger.dev/docs/overview" class="cite" data-src="S06">S06</a> <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>.</li>
+<li>Creating a Quant Connect bridge to Redbelly. The bridge flow deploys a destination token contract <a href="https://docs.overledger.dev/docs/set-a-unilateral-bridge" class="cite" data-src="S12">S12</a>, and Redbelly is not named as a network in the documentation we reviewed <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a> <a href="https://docs.overledger.dev/docs/set-a-unilateral-bridge" class="cite" data-src="S12">S12</a>.</li>
+<li>Connecting Redbelly to Fusion Rollup. Redbelly is not among Fusion's connected networks, and no self-serve route is documented <a href="https://docs.overledger.dev/docs/fusion-rollup" class="cite" data-src="S11">S11</a>.</li>
+<li>Sending a Redbelly transaction from an unverified address by any route, Overledger included <a href="https://redbelly.network/blog/devnet" class="cite" data-src="S29">S29</a> <a href="https://github.com/tycayomide/redbelly-testnet-bridge/blob/main/ARTICLE.md" class="cite" data-src="S36">S36</a>.</li>
+</ul>
+</div>
+<div class="panel panel-unknown" data-status="unknown">
+<p><span class="panel-label">Unknown</span></p>
+<p><strong>Unknown:</strong></p>
+<ul>
+<li>How Quant would classify Redbelly: self-serve or managed engagement <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>.</li>
+<li>Whether Overledger's EVM Connector works with Redbelly without changes.</li>
+<li>Whether any whitelisted node provider serves Redbelly.</li>
+<li>Whether Quant-held signing keys could be Redbelly-verified, and under whose identity <a href="https://docs.overledger.dev/docs/signing" class="cite" data-src="S09">S09</a> <a href="https://redbelly.network/blog/devnet" class="cite" data-src="S29">S29</a>.</li>
+<li>Whether TCH's On-Chain Money network will connect to any public chain <a href="https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative" class="cite" data-src="S01">S01</a>.</li>
+<li>The cost, timeline and commercial terms of any engagement.</li>
+<li>Whether Receptor verification can run on other chains.</li>
+<li>Redbelly's official position on bridging, which has not been published <a href="https://taskboard.redbellydao.network/tasks/TASK-29" class="cite" data-src="S38">S38</a>.</li>
+<li>Whether Redbelly appears in Overledger's live <code>GET /networks</code> list. Checking needs an Overledger account <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>.</li>
+</ul>
+</div>
+</section>
+<section id="signals" class="level2">
+<h2 data-split><span class="h-num">11</span>What would change the answer</h2>
+<div class="panel panel-analysis" data-status="analysis">
+<p><span class="panel-label">Analysis</span></p>
+<p>These public signals would move items from "unknown" to "confirmed". They are things to watch, not predictions:</p>
+<ul>
+<li>Redbelly appearing in Overledger's documentation or in the <code>GET /networks</code> list <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>.</li>
+<li>A published test of an Overledger Connector against Redbelly Testnet, chain ID 153 <a href="https://vine.redbelly.network/environments/" class="cite" data-src="S22">S22</a>.</li>
+<li>Redbelly publishing an official position on bridging <a href="https://taskboard.redbellydao.network/tasks/TASK-29" class="cite" data-src="S38">S38</a>.</li>
+<li>TCH publishing which ledgers the On-Chain Money network will use <a href="https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative" class="cite" data-src="S01">S01</a>.</li>
+<li>Receptor documentation describing verification on chains other than Redbelly <a href="https://docs.redbelly.network/pages/receptor/" class="cite" data-src="S16">S16</a> <a href="https://docs.redbelly.network/pages/methods/proof-by-query/" class="cite" data-src="S18">S18</a>.</li>
+</ul>
+</div>
+</section>
+<section id="method" class="level2">
+<h2 data-split><span class="h-num">12</span>Method and limits</h2>
+<ul>
+<li><strong>Sources.</strong> Quant's Overledger documentation and API reference, the TCH and Quant announcements, Redbelly's technical documentation and Vine developer portal, Tokeniser's website, Celer's and LayerZero's documentation, Redbelly's announcement of Wrapped RBNT, and three DAO community repositories, which were read in full. Every source is listed in the <a href="#sources">source list</a> with what it supports.</li>
+<li><strong>Checking.</strong> Each claim was checked against the source text available on 23 October 2026. The phrases each source supports are stored in <code>research/ledger.json</code>, and the audit (<code>npm run audit -- --online</code>) re-fetches every page and confirms that each phrase is still there. For Quant's pages it also confirms that Redbelly is still not named.</li>
+<li><strong>What we did not do.</strong> We did not open an Overledger account, call Overledger's API or register a node. Every statement about how Overledger would behave with Redbelly is therefore analysis, not a test result.</li>
+<li><strong>Vendor material.</strong> Product descriptions from Quant, Redbelly and Tokeniser are their own descriptions. We report what they say, and we label anything beyond that as analysis.</li>
+<li><strong>Neutrality.</strong> This report takes no view on whether a connection should happen. It contains no price discussion and no investment advice.</li>
+</ul>
+</section>
+<section id="glossary" class="level2">
+<h2 data-split><span class="h-num">13</span>Glossary</h2>
+<div class="table-wrap"><table>
+
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Overledger</td>
+<td>Quant's platform for applications that span several blockchains <a href="https://docs.overledger.dev/docs/start-here" class="cite" data-src="S05">S05</a></td>
+</tr>
+<tr class="even">
+<td>Gateway</td>
+<td>Overledger's front door: authentication, routing, rate limits, workflows <a href="https://docs.overledger.dev/docs/overview" class="cite" data-src="S06">S06</a></td>
+</tr>
+<tr class="odd">
+<td>Connector</td>
+<td>Overledger's adapter for one family of blockchains <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a></td>
+</tr>
+<tr class="even">
+<td>Fusion Rollup</td>
+<td>Quant's rollup that anchors to several base chains at once <a href="https://docs.overledger.dev/docs/fusion-rollup" class="cite" data-src="S11">S11</a></td>
+</tr>
+<tr class="odd">
+<td>EVM</td>
+<td>Ethereum Virtual Machine, the smart contract environment Redbelly supports <a href="https://vine.redbelly.network/sc-smart-contracts" class="cite" data-src="S24">S24</a></td>
+</tr>
+<tr class="even">
+<td>RPC endpoint</td>
+<td>The address software calls to read from or send to a blockchain node</td>
+</tr>
+<tr class="odd">
+<td>Receptor</td>
+<td>Redbelly's identity and verifiable credential protocol <a href="https://docs.redbelly.network/pages/receptor/" class="cite" data-src="S16">S16</a></td>
+</tr>
+<tr class="even">
+<td>Verifiable credential</td>
+<td>A signed digital statement about a person or company, held by them <a href="https://docs.redbelly.network/pages/receptor/" class="cite" data-src="S16">S16</a></td>
+</tr>
+<tr class="odd">
+<td>Accredited issuer</td>
+<td>An issuer that Redbelly allows to grant network access <a href="https://docs.redbelly.network/pages/modules/issuer/" class="cite" data-src="S17">S17</a></td>
+</tr>
+<tr class="even">
+<td>Zero-knowledge proof</td>
+<td>A way to prove a fact (for example, eligibility) without revealing the data behind it <a href="https://docs.redbelly.network/pages/methods/proof-by-query/" class="cite" data-src="S18">S18</a></td>
+</tr>
+<tr class="odd">
+<td>Lock-and-mint</td>
+<td>A bridge pattern that locks an asset on one chain and creates a copy on another <a href="https://github.com/Redbelly-DAO-Community-Taskboard/TASK-08-bridge-integration-guide" class="cite" data-src="S35">S35</a></td>
+</tr>
+<tr class="even">
+<td>Tokenised deposit</td>
+<td>A bank deposit represented on a ledger, the subject of TCH's initiative <a href="https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative" class="cite" data-src="S01">S01</a></td>
+</tr>
+<tr class="odd">
+<td>KMS or HSM</td>
+<td>Key management services and hardware security modules that protect signing keys <a href="https://docs.overledger.dev/docs/signing" class="cite" data-src="S09">S09</a></td>
+</tr>
+</tbody>
+</table></div>
+</section>
+
+  </main>
+</div>
+
+<section class="band" id="community">
+  <div class="band-inner">
+    <p class="kicker">Deliverable 2</p>
+    <h2 class="band-title" data-split>Community summary</h2>
+    <p class="band-lede">Ready for the DAO to share. Each post carries its source links; X counts every link as 23 characters, and every post fits in 280.</p>
+    <div class="thread-tools"><button type="button" class="btn btn-small" data-copy-thread>Copy the whole thread</button></div>
+    <ol class="thread"><li class="post" data-text="1/9 Could Redbelly plug into Quant's Overledger? Research, not guesswork. Short answer: not connected today. A basic link looks possible on paper. Anything deeper needs Quant. Redbelly and Quant have announced no partnership, talks or plans. https://taskboard.redbellydao.network/tasks/TASK-29">
+        <div class="post-head"><span class="n">1 / 9</span><span>265 / 280</span></div>
+        <p>Could Redbelly plug into Quant's Overledger? Research, not guesswork. Short answer: not connected today. A basic link looks possible on paper. Anything deeper needs Quant. Redbelly and Quant have announced no partnership, talks or plans.</p>
+        <div class="links"><a class="cite" href="https://taskboard.redbellydao.network/tasks/TASK-29" data-src="S38">S38</a></div>
+        <div><button type="button" class="post-copy">Copy post</button></div>
+      </li><li class="post" data-text="2/9 Why now: on 24 Sep 2026 The Clearing House picked Quant to power its On-Chain Money Initiative, a tokenised deposit network for financial institutions expected in the first half of 2027. The ledgers it will use are not public. https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative">
+        <div class="post-head"><span class="n">2 / 9</span><span>254 / 280</span></div>
+        <p>Why now: on 24 Sep 2026 The Clearing House picked Quant to power its On-Chain Money Initiative, a tokenised deposit network for financial institutions expected in the first half of 2027. The ledgers it will use are not public.</p>
+        <div class="links"><a class="cite" href="https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative" data-src="S01">S01</a></div>
+        <div><button type="button" class="post-copy">Copy post</button></div>
+      </li><li class="post" data-text="3/9 How chains join Overledger: public, permissionless networks in six families (EVM included) can be added self-serve by registering a node. Permissioned and consortium networks go through an engagement with Quant's team. https://docs.overledger.dev/docs/connectors">
+        <div class="post-head"><span class="n">3 / 9</span><span>246 / 280</span></div>
+        <p>How chains join Overledger: public, permissionless networks in six families (EVM included) can be added self-serve by registering a node. Permissioned and consortium networks go through an engagement with Quant's team.</p>
+        <div class="links"><a class="cite" href="https://docs.overledger.dev/docs/connectors" data-src="S07">S07</a></div>
+        <div><button type="button" class="post-copy">Copy post</button></div>
+      </li><li class="post" data-text="4/9 Redbelly runs EVM contracts, so it fits the EVM family. But only identity-verified accounts can write to Redbelly. Open to read, gated to write. Overledger's self-serve route is described for permissionless networks. https://vine.redbelly.network/sc-smart-contracts https://redbelly.network/blog/devnet">
+        <div class="post-head"><span class="n">4 / 9</span><span>268 / 280</span></div>
+        <p>Redbelly runs EVM contracts, so it fits the EVM family. But only identity-verified accounts can write to Redbelly. Open to read, gated to write. Overledger's self-serve route is described for permissionless networks.</p>
+        <div class="links"><a class="cite" href="https://vine.redbelly.network/sc-smart-contracts" data-src="S24">S24</a><a class="cite" href="https://redbelly.network/blog/devnet" data-src="S29">S29</a></div>
+        <div><button type="button" class="post-copy">Copy post</button></div>
+      </li><li class="post" data-text="5/9 So, on paper: an Overledger user could register a Redbelly node and pass through transactions signed by verified accounts. Nobody has published a test of this, and Quant decides how an identity-gated chain is classified. https://docs.overledger.dev/docs/connectors">
+        <div class="post-head"><span class="n">5 / 9</span><span>248 / 280</span></div>
+        <p>So, on paper: an Overledger user could register a Redbelly node and pass through transactions signed by verified accounts. Nobody has published a test of this, and Quant decides how an identity-gated chain is classified.</p>
+        <div class="links"><a class="cite" href="https://docs.overledger.dev/docs/connectors" data-src="S07">S07</a></div>
+        <div><button type="button" class="post-copy">Copy post</button></div>
+      </li><li class="post" data-text="6/9 Not possible yet: Redbelly is not a listed Overledger network, is not one of Fusion Rollup's connected chains, and is not a destination in the Quant Connect bridge flow. https://docs.overledger.dev/docs/connectors https://docs.overledger.dev/docs/fusion-rollup https://docs.overledger.dev/docs/set-a-unilateral-bridge">
+        <div class="post-head"><span class="n">6 / 9</span><span>245 / 280</span></div>
+        <p>Not possible yet: Redbelly is not a listed Overledger network, is not one of Fusion Rollup's connected chains, and is not a destination in the Quant Connect bridge flow.</p>
+        <div class="links"><a class="cite" href="https://docs.overledger.dev/docs/connectors" data-src="S07">S07</a><a class="cite" href="https://docs.overledger.dev/docs/fusion-rollup" data-src="S11">S11</a><a class="cite" href="https://docs.overledger.dev/docs/set-a-unilateral-bridge" data-src="S12">S12</a></div>
+        <div><button type="button" class="post-copy">Copy post</button></div>
+      </li><li class="post" data-text="7/9 Compliance: Receptor proofs and Tokeniser transfer checks run on Redbelly. Another chain applies its own rules. A connection would need to mirror eligibility or keep assets on Redbelly and move instructions only. https://docs.redbelly.network/pages/methods/proof-by-query/ https://tokeniser.com/">
+        <div class="post-head"><span class="n">7 / 9</span><span>264 / 280</span></div>
+        <p>Compliance: Receptor proofs and Tokeniser transfer checks run on Redbelly. Another chain applies its own rules. A connection would need to mirror eligibility or keep assets on Redbelly and move instructions only.</p>
+        <div class="links"><a class="cite" href="https://docs.redbelly.network/pages/methods/proof-by-query/" data-src="S18">S18</a><a class="cite" href="https://tokeniser.com/" data-src="S31">S31</a></div>
+        <div><button type="button" class="post-copy">Copy post</button></div>
+      </li><li class="post" data-text="8/9 Still unknown: how Quant would classify Redbelly, whether Overledger's EVM Connector works with Redbelly unchanged, whether the TCH network will reach public chains, and Redbelly's official position on bridging. https://taskboard.redbellydao.network/tasks/TASK-29">
+        <div class="post-head"><span class="n">8 / 9</span><span>239 / 280</span></div>
+        <p>Still unknown: how Quant would classify Redbelly, whether Overledger's EVM Connector works with Redbelly unchanged, whether the TCH network will reach public chains, and Redbelly's official position on bridging.</p>
+        <div class="links"><a class="cite" href="https://taskboard.redbellydao.network/tasks/TASK-29" data-src="S38">S38</a></div>
+        <div><button type="button" class="post-copy">Copy post</button></div>
+      </li><li class="post" data-text="9/9 The full report that accompanies this thread links a source for every claim and splits findings into Confirmed, Analysis and Unknown. Feasibility research only: no price talk, no investment advice.">
+        <div class="post-head"><span class="n">9 / 9</span><span>201 / 280</span></div>
+        <p>The full report that accompanies this thread links a source for every claim and splits findings into Confirmed, Analysis and Unknown. Feasibility research only: no price talk, no investment advice.</p>
+        
+        <div><button type="button" class="post-copy">Copy post</button></div>
+      </li></ol>
+    <h3 class="sub">In a few paragraphs</h3>
+    <div class="paras"><p>The Clearing House, a US payments company that operates core payment networks <a href="https://www.theclearinghouse.org/payment-systems/Articles/2026/06/Major-Financial-Institutions-Unveil-Bank-Led-On-Chain-Money-Initiative" class="cite" data-src="S04">S04</a>, chose Quant in September 2026 to power its On-Chain Money Initiative, a network for clearing and settling tokenised bank deposits that is expected to open to participating institutions in the first half of 2027 <a href="https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative" class="cite" data-src="S01">S01</a>. Overledger is Quant's platform for applications that span several blockchains <a href="https://docs.overledger.dev/docs/start-here" class="cite" data-src="S05">S05</a>, so the community asked whether Redbelly could connect to it. Redbelly and Quant have no announced partnership or talks <a href="https://taskboard.redbellydao.network/tasks/TASK-29" class="cite" data-src="S38">S38</a>, and this research does not suggest one.</p>
+<p>Today Redbelly is not connected to Overledger. Overledger lets accounts add public, permissionless networks in six families, EVM among them, by registering a node <a href="https://docs.overledger.dev/docs/connectors" class="cite" data-src="S07">S07</a>. Redbelly is EVM-compatible <a href="https://vine.redbelly.network/sc-smart-contracts" class="cite" data-src="S24">S24</a>, so a basic link where Overledger carries transactions already signed by verified Redbelly accounts looks possible on paper. It has not been tested, and Redbelly only lets identity-verified accounts write to the network <a href="https://redbelly.network/blog/devnet" class="cite" data-src="S29">S29</a>, which does not fit neatly into Overledger's permissionless category. Quant would decide how to treat that. Deeper options, such as joining Quant's Fusion Rollup or using Quant's bridge flow, are not available unless Quant chooses to support Redbelly <a href="https://docs.overledger.dev/docs/fusion-rollup" class="cite" data-src="S11">S11</a> <a href="https://docs.overledger.dev/docs/set-a-unilateral-bridge" class="cite" data-src="S12">S12</a>.</p>
+<p>The biggest open question is compliance. Redbelly's identity checks (Receptor) and Tokeniser's per-transfer checks run on Redbelly itself <a href="https://docs.redbelly.network/pages/methods/proof-by-query/" class="cite" data-src="S18">S18</a> <a href="https://tokeniser.com/" class="cite" data-src="S31">S31</a>. Once an asset is represented on another chain, that chain's rules apply instead. Any future connection would need to carry eligibility across, or keep assets on Redbelly and only move instructions. The full report sets out what is confirmed, what is our analysis, and what is still unknown, with a source link for every factual claim.</p>
+</div>
+  </div>
+</section>
+
+<section class="band band-alt" id="sources">
+  <div class="band-inner">
+    <p class="kicker">Deliverable 3</p>
+    <h2 class="band-title" data-split>Source list</h2>
+    <p class="band-lede">Every factual claim links to one of these 38 sources. Each card shows what the source supports, the exact phrases the audit re-checks, and where the report cites it.</p>
+    <div class="src-filter" role="group" aria-label="Filter sources"><button type="button" data-group="all" aria-pressed="true">All 38</button><button type="button" data-group="tch" aria-pressed="false">The Clearing House 4</button><button type="button" data-group="quant" aria-pressed="false">Quant and Overledger 10</button><button type="button" data-group="redbelly" aria-pressed="false">Redbelly Network 16</button><button type="button" data-group="tokeniser" aria-pressed="false">Tokeniser 1</button><button type="button" data-group="bridges" aria-pressed="false">Bridges and wrapped RBNT 3</button><button type="button" data-group="community" aria-pressed="false">Redbelly DAO community work 4</button></div>
+    <div class="src-grid"><article class="src" id="src-S01" data-group="tch">
+        <div class="src-top"><span class="id">S01</span><span>The Clearing House</span></div>
+        <h3><a href="https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative" rel="noopener" target="_blank">The Clearing House Partners with Quant to Advance the On-Chain Money Initiative</a></h3>
+        <p class="url">The Clearing House / 2026-09-24<br>https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative</p>
+        <p>TCH selected Quant to power the On-Chain Money Initiative, a network for clearing and settling tokenised deposits, connected to RTP and CHIPS and expected to be available to participating institutions in the first half of 2027.</p>
+        <div class="phr"><code>On-Chain Money Initiative</code><code>first half of 2027</code><code>CHIPS</code></div>
+        <p class="used">Cited in: <a href="#short-answer">The short answer</a>, <a href="#why-now">Why the question is being asked now</a>, <a href="#offer">What it could offer institutions</a>, <a href="#unknowns">Not possible yet, and unknown</a>, <a href="#signals">What would change the answer</a>, <a href="#glossary">Glossary</a></p>
+      </article><article class="src" id="src-S02" data-group="tch">
+        <div class="src-top"><span class="id">S02</span><span>The Clearing House</span></div>
+        <h3><a href="https://quant.network/press-releases/the-clearing-house-partners-with-quant-to-advance-the-on-chain-money-initiative/" rel="noopener" target="_blank">The Clearing House Partners with Quant to Advance the On-Chain Money Initiative (Quant press release)</a></h3>
+        <p class="url">Quant / 2026-09-24<br>https://quant.network/press-releases/the-clearing-house-partners-with-quant-to-advance-the-on-chain-money-initiative/</p>
+        <p>Quant's technology provides the network's interoperability, orchestration and transaction-management layer; Quant also offers Tokenised Deposits-as-a-Service to institutions that process through TCH but lack tokenised deposit capability.</p>
+        <div class="phr"><code>orchestration</code><code>Tokenised Deposits-as-a-Service</code></div>
+        <p class="used">Cited in: <a href="#why-now">Why the question is being asked now</a></p>
+      </article><article class="src" id="src-S03" data-group="tch">
+        <div class="src-top"><span class="id">S03</span><span>The Clearing House</span></div>
+        <h3><a href="https://quant.network/news/quant-powers-the-clearing-houses-on-chain-money-initiative-in-the-us/" rel="noopener" target="_blank">Quant powers The Clearing House's On-Chain Money Initiative in the US</a></h3>
+        <p class="url">Quant / 2026-09<br>https://quant.network/news/quant-powers-the-clearing-houses-on-chain-money-initiative-in-the-us/</p>
+        <p>Quant describes its role as coordinating clearing and settlement of tokenised deposit transactions with connectivity to existing fiat payment systems.</p>
+        <div class="phr"><code>tokenised deposit</code><code>fiat payment systems</code></div>
+        <p class="used">Cited in: <a href="#why-now">Why the question is being asked now</a></p>
+      </article><article class="src" id="src-S04" data-group="tch">
+        <div class="src-top"><span class="id">S04</span><span>The Clearing House</span></div>
+        <h3><a href="https://www.theclearinghouse.org/payment-systems/Articles/2026/06/Major-Financial-Institutions-Unveil-Bank-Led-On-Chain-Money-Initiative" rel="noopener" target="_blank">Major Financial Institutions Unveil Bank-Led On-Chain Money Initiative</a></h3>
+        <p class="url">The Clearing House / 2026-06<br>https://www.theclearinghouse.org/payment-systems/Articles/2026/06/Major-Financial-Institutions-Unveil-Bank-Led-On-Chain-Money-Initiative</p>
+        <p>The initiative was unveiled in June 2026 as a bank-led effort, operated by TCH, for on-chain clearing and settlement of tokenised deposits between banks.</p>
+        <div class="phr"><code>On-Chain Money Initiative</code><code>The Clearing House</code></div>
+        <p class="used">Cited in: <a href="#why-now">Why the question is being asked now</a>, <a href="#offer">What it could offer institutions</a></p>
+      </article><article class="src" id="src-S05" data-group="quant">
+        <div class="src-top"><span class="id">S05</span><span>Quant and Overledger</span></div>
+        <h3><a href="https://docs.overledger.dev/docs/start-here" rel="noopener" target="_blank">Start Here (Overledger documentation)</a></h3>
+        <p class="url">Quant Developer Hub / accessed 2026-10-23<br>https://docs.overledger.dev/docs/start-here</p>
+        <p>Overledger is Quant's multi-DLT platform for applications that span more than one blockchain, with one set of credentials and one API surface; client integrations start with the Gateway and Connectors chapters.</p>
+        <div class="phr"><code>multi-DLT platform</code><code>single set of credentials</code><code>not: Redbelly</code></div>
+        <p class="used">Cited in: <a href="#short-answer">The short answer</a>, <a href="#overledger">Overledger in plain words</a>, <a href="#offer">What it could offer institutions</a>, <a href="#unknowns">Not possible yet, and unknown</a>, <a href="#glossary">Glossary</a></p>
+      </article><article class="src" id="src-S06" data-group="quant">
+        <div class="src-top"><span class="id">S06</span><span>Quant and Overledger</span></div>
+        <h3><a href="https://docs.overledger.dev/docs/overview" rel="noopener" target="_blank">Overview (Overledger documentation)</a></h3>
+        <p class="url">Quant Developer Hub / accessed 2026-10-23<br>https://docs.overledger.dev/docs/overview</p>
+        <p>The Gateway handles authentication, routing to Connectors or the Fusion Rollup, rate limiting, observability and orchestration of Flow Applications; a Cross Chain Messaging component moves data and contract calls between connected networks; Fusion Firewall policies are mirrored on each connected L1.</p>
+        <div class="phr"><code>Fusion Rollup</code><code>Flow Applications</code><code>not: Redbelly</code></div>
+        <p class="used">Cited in: <a href="#short-answer">The short answer</a>, <a href="#overledger">Overledger in plain words</a>, <a href="#connect-now">Can Redbelly connect now?</a>, <a href="#offer">What it could offer institutions</a>, <a href="#compliance">Credentials and assets across chains</a>, <a href="#unknowns">Not possible yet, and unknown</a>, <a href="#glossary">Glossary</a></p>
+      </article><article class="src" id="src-S07" data-group="quant">
+        <div class="src-top"><span class="id">S07</span><span>Quant and Overledger</span></div>
+        <h3><a href="https://docs.overledger.dev/docs/connectors" rel="noopener" target="_blank">Connectors (Overledger documentation)</a></h3>
+        <p class="url">Quant Developer Hub / accessed 2026-10-23<br>https://docs.overledger.dev/docs/connectors</p>
+        <p>Connectors present a single multi-DLT RPC endpoint backed by per-family node pools; six self-serve families (EVM, Solana, Cosmos, SUI, Hedera, Aptos); permissioned and consortium networks need a managed engagement; a first POST /nodes call can register a new network in a supported family; public nodes only from whitelisted providers, private nodes from any domain; administrative RPC methods are blocked; live list via GET /networks.</p>
+        <div class="phr"><code>multi-DLT RPC endpoint</code><code>whitelisted providers</code><code>POST /nodes</code><code>Hyperledger Fabric</code><code>not: Redbelly</code></div>
+        <p class="used">Cited in: <a href="#read-first">Read this first</a>, <a href="#short-answer">The short answer</a>, <a href="#overledger">Overledger in plain words</a>, <a href="#redbelly">Redbelly, in the terms that matter here</a>, <a href="#connect-now">Can Redbelly connect now?</a>, <a href="#the-work">What a connection would take</a>, <a href="#offer">What it could offer institutions</a>, <a href="#unknowns">Not possible yet, and unknown</a>, <a href="#signals">What would change the answer</a>, <a href="#glossary">Glossary</a></p>
+      </article><article class="src" id="src-S08" data-group="quant">
+        <div class="src-top"><span class="id">S08</span><span>Quant and Overledger</span></div>
+        <h3><a href="https://docs.overledger.dev/docs/authentication" rel="noopener" target="_blank">Authentication (Overledger documentation)</a></h3>
+        <p class="url">Quant Developer Hub / accessed 2026-10-23<br>https://docs.overledger.dev/docs/authentication</p>
+        <p>Users sign in to Quant Connect for a JWT, mint API keys through the REST API and send them with RPC calls; API keys authenticate access but transactions still need the caller's own wallet signature.</p>
+        <div class="phr"><code>Quant Connect</code><code>API key</code><code>not: Redbelly</code></div>
+        <p class="used">Cited in: <a href="#overledger">Overledger in plain words</a></p>
+      </article><article class="src" id="src-S09" data-group="quant">
+        <div class="src-top"><span class="id">S09</span><span>Quant and Overledger</span></div>
+        <h3><a href="https://docs.overledger.dev/docs/signing" rel="noopener" target="_blank">Signing (Overledger documentation)</a></h3>
+        <p class="url">Quant Developer Hub / accessed 2026-10-23<br>https://docs.overledger.dev/docs/signing</p>
+        <p>A Signer Flow App handles signing: either the client holds keys and signs, or Quant holds them (testnet hot wallet, or contracted mainnet KMS or HSM); the Gateway and calling Flow App never see private keys.</p>
+        <div class="phr"><code>Signer</code><code>HSM</code><code>not: Redbelly</code></div>
+        <p class="used">Cited in: <a href="#short-answer">The short answer</a>, <a href="#overledger">Overledger in plain words</a>, <a href="#the-work">What a connection would take</a>, <a href="#offer">What it could offer institutions</a>, <a href="#compliance">Credentials and assets across chains</a>, <a href="#unknowns">Not possible yet, and unknown</a>, <a href="#glossary">Glossary</a></p>
+      </article><article class="src" id="src-S10" data-group="quant">
+        <div class="src-top"><span class="id">S10</span><span>Quant and Overledger</span></div>
+        <h3><a href="https://docs.overledger.dev/docs/overledger-firewall" rel="noopener" target="_blank">Overledger Firewall (Overledger documentation)</a></h3>
+        <p class="url">Quant Developer Hub / accessed 2026-10-23<br>https://docs.overledger.dev/docs/overledger-firewall</p>
+        <p>An off-chain Connector layer decides whether an authenticated user may reach a network (permissioned networks need the user on an allowlist); an on-chain Fusion Firewall allowlists addresses for contract calls, cross-chain messages and token bridging.</p>
+        <div class="phr"><code>allowlist</code><code>Fusion Firewall</code><code>not: Redbelly</code></div>
+        <p class="used">Cited in: <a href="#short-answer">The short answer</a>, <a href="#overledger">Overledger in plain words</a>, <a href="#the-work">What a connection would take</a>, <a href="#offer">What it could offer institutions</a>, <a href="#compliance">Credentials and assets across chains</a></p>
+      </article><article class="src" id="src-S11" data-group="quant">
+        <div class="src-top"><span class="id">S11</span><span>Quant and Overledger</span></div>
+        <h3><a href="https://docs.overledger.dev/docs/fusion-rollup" rel="noopener" target="_blank">Fusion Rollup (Overledger documentation)</a></h3>
+        <p class="url">Quant Developer Hub / accessed 2026-10-23<br>https://docs.overledger.dev/docs/fusion-rollup</p>
+        <p>Fusion is a multi-ledger optimistic rollup (an OP Stack fork) that anchors to several L1s at once; primitives cover deposit, unify, trigger and withdraw or mint; at testnet launch it connected Ethereum Sepolia, Polygon Amoy and a Quant permissioned Besu testnet; the firewall is locked down on mainnet and more permissive on testnet; a sender on a connected network must be allowlisted for the specific rollup recipient; it flags lock-and-mint mismatch, custodian compromise and oracle failure as bridge risks.</p>
+        <div class="phr"><code>OP Stack</code><code>Polygon Amoy</code><code>Sepolia</code><code>not: Redbelly</code></div>
+        <p class="used">Cited in: <a href="#short-answer">The short answer</a>, <a href="#overledger">Overledger in plain words</a>, <a href="#connect-now">Can Redbelly connect now?</a>, <a href="#the-work">What a connection would take</a>, <a href="#compliance">Credentials and assets across chains</a>, <a href="#unknowns">Not possible yet, and unknown</a>, <a href="#glossary">Glossary</a></p>
+      </article><article class="src" id="src-S12" data-group="quant">
+        <div class="src-top"><span class="id">S12</span><span>Quant and Overledger</span></div>
+        <h3><a href="https://docs.overledger.dev/docs/set-a-unilateral-bridge" rel="noopener" target="_blank">How to create a bridge flow (Overledger documentation)</a></h3>
+        <p class="url">Quant Developer Hub / accessed 2026-10-23<br>https://docs.overledger.dev/docs/set-a-unilateral-bridge</p>
+        <p>Bridges are created through a bridge flow in Quant Connect that deploys a destination token contract and returns a Bridge ID used for transfers.</p>
+        <div class="phr"><code>Bridge ID</code><code>Quant Connect</code><code>not: Redbelly</code></div>
+        <p class="used">Cited in: <a href="#short-answer">The short answer</a>, <a href="#overledger">Overledger in plain words</a>, <a href="#the-work">What a connection would take</a>, <a href="#unknowns">Not possible yet, and unknown</a></p>
+      </article><article class="src" id="src-S13" data-group="quant">
+        <div class="src-top"><span class="id">S13</span><span>Quant and Overledger</span></div>
+        <h3><a href="https://docs.overledger.dev/reference" rel="noopener" target="_blank">Overledger API reference</a></h3>
+        <p class="url">Quant Developer Hub / accessed 2026-10-23<br>https://docs.overledger.dev/reference</p>
+        <p>Quant publishes a reference for the Overledger APIs, the interface any connection would be built against.</p>
+        <div class="phr"><code>Overledger</code><code>not: Redbelly</code></div>
+        <p class="used">Cited in: <a href="#overledger">Overledger in plain words</a></p>
+      </article><article class="src" id="src-S14" data-group="quant">
+        <div class="src-top"><span class="id">S14</span><span>Quant and Overledger</span></div>
+        <h3><a href="https://docs.overledger.dev/docs/manage-webhooks-for-smart-contract-events-1" rel="noopener" target="_blank">Manage Webhooks for Smart Contract Events (Overledger documentation)</a></h3>
+        <p class="url">Quant Developer Hub / accessed 2026-10-23<br>https://docs.overledger.dev/docs/manage-webhooks-for-smart-contract-events-1</p>
+        <p>Overledger documents webhooks that notify applications about smart contract events.</p>
+        <div class="phr"><code>Webhook</code><code>not: Redbelly</code></div>
+        <p class="used">Cited in: <a href="#overledger">Overledger in plain words</a>, <a href="#the-work">What a connection would take</a>, <a href="#offer">What it could offer institutions</a></p>
+      </article><article class="src" id="src-S15" data-group="redbelly">
+        <div class="src-top"><span class="id">S15</span><span>Redbelly Network</span></div>
+        <h3><a href="https://docs.redbelly.network/" rel="noopener" target="_blank">Redbelly Network Technical Documentation</a></h3>
+        <p class="url">Redbelly Network / accessed 2026-10-23<br>https://docs.redbelly.network/</p>
+        <p>Redbelly describes itself as a layer 1 blockchain built and optimised for real world asset tokenisation, with identity and eligibility tooling for developers.</p>
+        <div class="phr"><code>Redbelly</code></div>
+        <p class="used">Cited in: <a href="#redbelly">Redbelly, in the terms that matter here</a></p>
+      </article><article class="src" id="src-S16" data-group="redbelly">
+        <div class="src-top"><span class="id">S16</span><span>Redbelly Network</span></div>
+        <h3><a href="https://docs.redbelly.network/pages/receptor/" rel="noopener" target="_blank">Receptor (Redbelly documentation)</a></h3>
+        <p class="url">Redbelly Network / accessed 2026-10-23<br>https://docs.redbelly.network/pages/receptor/</p>
+        <p>Receptor is Redbelly's native identity and verifiable credential protocol, built on the W3C verifiable credential data model, with Issuer, Holder and Verifier modules; anyone can issue credentials, but issuers that provide network access are accredited.</p>
+        <div class="phr"><code>W3C verifiable credential data model</code><code>accredited</code></div>
+        <p class="used">Cited in: <a href="#redbelly">Redbelly, in the terms that matter here</a>, <a href="#the-work">What a connection would take</a>, <a href="#offer">What it could offer institutions</a>, <a href="#compliance">Credentials and assets across chains</a>, <a href="#signals">What would change the answer</a>, <a href="#glossary">Glossary</a></p>
+      </article><article class="src" id="src-S17" data-group="redbelly">
+        <div class="src-top"><span class="id">S17</span><span>Redbelly Network</span></div>
+        <h3><a href="https://docs.redbelly.network/pages/modules/issuer/" rel="noopener" target="_blank">Issuer module (Redbelly documentation)</a></h3>
+        <p class="url">Redbelly Network / accessed 2026-10-23<br>https://docs.redbelly.network/pages/modules/issuer/</p>
+        <p>Only accredited issuers can issue credentials that give users network access.</p>
+        <div class="phr"><code>accredited issuers</code></div>
+        <p class="used">Cited in: <a href="#short-answer">The short answer</a>, <a href="#redbelly">Redbelly, in the terms that matter here</a>, <a href="#glossary">Glossary</a></p>
+      </article><article class="src" id="src-S18" data-group="redbelly">
+        <div class="src-top"><span class="id">S18</span><span>Redbelly Network</span></div>
+        <h3><a href="https://docs.redbelly.network/pages/methods/proof-by-query/" rel="noopener" target="_blank">Proof by Query (Redbelly documentation)</a></h3>
+        <p class="url">Redbelly Network / accessed 2026-10-23<br>https://docs.redbelly.network/pages/methods/proof-by-query/</p>
+        <p>Proof by Query uses zero-knowledge proofs checked by a verifier smart contract that the verifier deploys on Redbelly Network (setZKPRequest), to which the holder submits a proof (submitZKPResponse); personal data is not seen or stored by the verifier.</p>
+        <div class="phr"><code>setZKPRequest</code><code>submitZKPResponse</code></div>
+        <p class="used">Cited in: <a href="#compliance">Credentials and assets across chains</a>, <a href="#signals">What would change the answer</a>, <a href="#glossary">Glossary</a></p>
+      </article><article class="src" id="src-S19" data-group="redbelly">
+        <div class="src-top"><span class="id">S19</span><span>Redbelly Network</span></div>
+        <h3><a href="https://docs.redbelly.network/pages/methods/selective-disclosure/" rel="noopener" target="_blank">Selective Disclosure (Redbelly documentation)</a></h3>
+        <p class="url">Redbelly Network / accessed 2026-10-23<br>https://docs.redbelly.network/pages/methods/selective-disclosure/</p>
+        <p>Selective Disclosure verifies credentials that require users to reveal specified, verifiable information off-chain.</p>
+        <div class="phr"><code>off-chain</code></div>
+        <p class="used">Cited in: <a href="#compliance">Credentials and assets across chains</a></p>
+      </article><article class="src" id="src-S20" data-group="redbelly">
+        <div class="src-top"><span class="id">S20</span><span>Redbelly Network</span></div>
+        <h3><a href="https://docs.redbelly.network/pages/eligibility-sdk/getting-started/" rel="noopener" target="_blank">Eligibility SDK: Getting Started (Redbelly documentation)</a></h3>
+        <p class="url">Redbelly Network / accessed 2026-10-23<br>https://docs.redbelly.network/pages/eligibility-sdk/getting-started/</p>
+        <p>The Eligibility SDK is installed as @redbellynetwork/eligibility-sdk and needs a Redbelly API key and an allowed issuer DID.</p>
+        <div class="phr"><code>eligibility-sdk</code></div>
+        <p class="used">Cited in: <a href="#compliance">Credentials and assets across chains</a></p>
+      </article><article class="src" id="src-S21" data-group="redbelly">
+        <div class="src-top"><span class="id">S21</span><span>Redbelly Network</span></div>
+        <h3><a href="https://docs.redbelly.network/pages/eligibility-sdk/configure-eligibility-criteria/" rel="noopener" target="_blank">Configure Eligibility Criteria (Redbelly documentation)</a></h3>
+        <p class="url">Redbelly Network / accessed 2026-10-23<br>https://docs.redbelly.network/pages/eligibility-sdk/configure-eligibility-criteria/</p>
+        <p>Eligibility criteria are Iden3-style queries over credential types such as passport, proof of address and AML/CTF credentials; on-chain checks use the credentialAtomicQuerySigV2OnChain circuit; on-chain single queries are supported, multi-query is planned.</p>
+        <div class="phr"><code>credentialAtomicQuerySigV2OnChain</code></div>
+        <p class="used">Cited in: <a href="#the-work">What a connection would take</a>, <a href="#compliance">Credentials and assets across chains</a></p>
+      </article><article class="src" id="src-S22" data-group="redbelly">
+        <div class="src-top"><span class="id">S22</span><span>Redbelly Network</span></div>
+        <h3><a href="https://vine.redbelly.network/environments/" rel="noopener" target="_blank">Redbelly Network environments (Vine developer portal)</a></h3>
+        <p class="url">Redbelly Network / accessed 2026-10-23<br>https://vine.redbelly.network/environments/</p>
+        <p>Mainnet is chain ID 151 with RBNT as currency and a public RPC URL; Testnet is chain ID 153.</p>
+        <div class="phr"><code>151</code><code>153</code></div>
+        <p class="used">Cited in: <a href="#short-answer">The short answer</a>, <a href="#redbelly">Redbelly, in the terms that matter here</a>, <a href="#connect-now">Can Redbelly connect now?</a>, <a href="#the-work">What a connection would take</a>, <a href="#signals">What would change the answer</a></p>
+      </article><article class="src" id="src-S23" data-group="redbelly">
+        <div class="src-top"><span class="id">S23</span><span>Redbelly Network</span></div>
+        <h3><a href="https://vine.redbelly.network/consensus/" rel="noopener" target="_blank">DBFT and super block: security, finality and scalability (Vine developer portal)</a></h3>
+        <p class="url">Redbelly Network / accessed 2026-10-23<br>https://vine.redbelly.network/consensus/</p>
+        <p>Security, finality and scalability come from DBFT, a leaderless consensus algorithm tolerating faults up to t &lt; n/3, and the super block optimisation of the EVM.</p>
+        <div class="phr"><code>leaderless</code><code>super block</code></div>
+        <p class="used">Cited in: <a href="#redbelly">Redbelly, in the terms that matter here</a>, <a href="#offer">What it could offer institutions</a></p>
+      </article><article class="src" id="src-S24" data-group="redbelly">
+        <div class="src-top"><span class="id">S24</span><span>Redbelly Network</span></div>
+        <h3><a href="https://vine.redbelly.network/sc-smart-contracts" rel="noopener" target="_blank">Smart contracts (Vine developer portal)</a></h3>
+        <p class="url">Redbelly Network / accessed 2026-10-23<br>https://vine.redbelly.network/sc-smart-contracts</p>
+        <p>Redbelly executes smart contracts written for the EVM in Solidity; testing should happen on Testnet.</p>
+        <div class="phr"><code>Solidity</code></div>
+        <p class="used">Cited in: <a href="#short-answer">The short answer</a>, <a href="#redbelly">Redbelly, in the terms that matter here</a>, <a href="#connect-now">Can Redbelly connect now?</a>, <a href="#glossary">Glossary</a></p>
+      </article><article class="src" id="src-S25" data-group="redbelly">
+        <div class="src-top"><span class="id">S25</span><span>Redbelly Network</span></div>
+        <h3><a href="https://vine.redbelly.network/network-fees/" rel="noopener" target="_blank">Network fees (Vine developer portal)</a></h3>
+        <p class="url">Redbelly Network / accessed 2026-10-23<br>https://vine.redbelly.network/network-fees/</p>
+        <p>The unit price of gas is fixed in US dollar terms and converted to RBNT at execution using an on-chain price oracle.</p>
+        <div class="phr"><code>oracle</code></div>
+        <p class="used">Cited in: <a href="#redbelly">Redbelly, in the terms that matter here</a>, <a href="#connect-now">Can Redbelly connect now?</a>, <a href="#offer">What it could offer institutions</a></p>
+      </article><article class="src" id="src-S26" data-group="redbelly">
+        <div class="src-top"><span class="id">S26</span><span>Redbelly Network</span></div>
+        <h3><a href="https://vine.redbelly.network/native-currency/" rel="noopener" target="_blank">Redbelly Network native currency (Vine developer portal)</a></h3>
+        <p class="url">Redbelly Network / accessed 2026-10-23<br>https://vine.redbelly.network/native-currency/</p>
+        <p>Lists routes for RBNT on other chains (Base via LayerZero, Ethereum mainnet via Polymer) and points to Lucid Labs Bridge for moving RBNT back to Redbelly.</p>
+        <div class="phr"><code>LayerZero</code><code>Polymer</code><code>Lucid Labs</code></div>
+        <p class="used">Cited in: <a href="#redbelly">Redbelly, in the terms that matter here</a></p>
+      </article><article class="src" id="src-S27" data-group="redbelly">
+        <div class="src-top"><span class="id">S27</span><span>Redbelly Network</span></div>
+        <h3><a href="https://vine.redbelly.network/id-accessing-the-network" rel="noopener" target="_blank">Accessing the network (Vine developer portal)</a></h3>
+        <p class="url">Redbelly Network / accessed 2026-10-23<br>https://vine.redbelly.network/id-accessing-the-network</p>
+        <p>Users connect an EVM wallet to the Redbelly access dApp and prove a valid photo identity document through biometric checks before their account is enabled.</p>
+        <div class="phr"><code>access</code></div>
+        <p class="used">Cited in: <a href="#redbelly">Redbelly, in the terms that matter here</a></p>
+      </article><article class="src" id="src-S28" data-group="redbelly">
+        <div class="src-top"><span class="id">S28</span><span>Redbelly Network</span></div>
+        <h3><a href="https://access.redbelly.network/" rel="noopener" target="_blank">Redbelly Access</a></h3>
+        <p class="url">Redbelly Network / accessed 2026-10-23<br>https://access.redbelly.network/</p>
+        <p>Identity is verified by the accredited issuer Averer before it issues the Redbelly Network Access Credential to the account.</p>
+        <div class="phr"><code>Averer</code></div>
+        <p class="used">Cited in: <a href="#short-answer">The short answer</a>, <a href="#redbelly">Redbelly, in the terms that matter here</a></p>
+      </article><article class="src" id="src-S29" data-group="redbelly">
+        <div class="src-top"><span class="id">S29</span><span>Redbelly Network</span></div>
+        <h3><a href="https://redbelly.network/blog/devnet" rel="noopener" target="_blank">Redbelly DevNet blog post</a></h3>
+        <p class="url">Redbelly Network / older post, accessed 2026-10-23<br>https://redbelly.network/blog/devnet</p>
+        <p>Before users can self-enable their accounts with write access to the network, they must claim an access credential from a network accredited issuer.</p>
+        <div class="phr"><code>write access</code></div>
+        <p class="used">Cited in: <a href="#short-answer">The short answer</a>, <a href="#redbelly">Redbelly, in the terms that matter here</a>, <a href="#connect-now">Can Redbelly connect now?</a>, <a href="#the-work">What a connection would take</a>, <a href="#offer">What it could offer institutions</a>, <a href="#compliance">Credentials and assets across chains</a>, <a href="#unknowns">Not possible yet, and unknown</a></p>
+      </article><article class="src" id="src-S30" data-group="redbelly">
+        <div class="src-top"><span class="id">S30</span><span>Redbelly Network</span></div>
+        <h3><a href="https://vine.redbelly.network/nodes/operator-guide/" rel="noopener" target="_blank">Node operator guide (Vine developer portal)</a></h3>
+        <p class="url">Redbelly Network / accessed 2026-10-23<br>https://vine.redbelly.network/nodes/operator-guide/</p>
+        <p>Companies or trusts may register through Redbelly's Business verification process.</p>
+        <div class="phr"><code>Business verification</code></div>
+        <p class="used">Cited in: <a href="#redbelly">Redbelly, in the terms that matter here</a>, <a href="#the-work">What a connection would take</a></p>
+      </article><article class="src" id="src-S31" data-group="tokeniser">
+        <div class="src-top"><span class="id">S31</span><span>Tokeniser</span></div>
+        <h3><a href="https://tokeniser.com/" rel="noopener" target="_blank">Tokeniser</a></h3>
+        <p class="url">Tokeniser Pty Ltd / accessed 2026-10-23<br>https://tokeniser.com/</p>
+        <p>Tokeniser operates on Redbelly Network with identity and eligibility built into the protocol; eligibility (identity, KYC, AML, CTF, wholesale and sophisticated investor tests, TMD) is programmed into every asset; every holder is verified and every transfer checked against the asset's rules; features include secondary transfer and collateral mobility.</p>
+        <div class="phr"><code>every transfer checked against the asset's rules</code><code>Redbelly Network</code></div>
+        <p class="used">Cited in: <a href="#offer">What it could offer institutions</a>, <a href="#compliance">Credentials and assets across chains</a></p>
+      </article><article class="src" id="src-S32" data-group="bridges">
+        <div class="src-top"><span class="id">S32</span><span>Bridges and wrapped RBNT</span></div>
+        <h3><a href="https://blog.celer.network/2025/08/01/celer-announces-cbridge-support-for-redbelly/" rel="noopener" target="_blank">Celer Announces cBridge Support for Redbelly</a></h3>
+        <p class="url">Celer Network / 2025-08-01<br>https://blog.celer.network/2025/08/01/celer-announces-cbridge-support-for-redbelly/</p>
+        <p>cBridge connects Ethereum, BNB Chain and Redbelly with a pegged bridge model; RBNT moves from Redbelly to Ethereum and BNB Chain.</p>
+        <div class="phr"><code>Redbelly</code><code>BNB Chain</code></div>
+        <p class="used">Cited in: <a href="#redbelly">Redbelly, in the terms that matter here</a></p>
+      </article><article class="src" id="src-S33" data-group="bridges">
+        <div class="src-top"><span class="id">S33</span><span>Bridges and wrapped RBNT</span></div>
+        <h3><a href="https://x.com/RedbellyNetwork/status/1890340030197166112" rel="noopener" target="_blank">Redbelly Network on X: Wrapped RBNT live on Ethereum Mainnet</a></h3>
+        <p class="url">Redbelly Network / 2025-02-14<br>https://x.com/RedbellyNetwork/status/1890340030197166112</p>
+        <p>Redbelly announced Wrapped RBNT on Ethereum Mainnet with the official contract 0xb45ffb51984d626ee758b336c61cf20990c6bf13.</p>
+        <div class="phr"><code>0xb45ffb51984d626ee758b336c61cf20990c6bf13</code></div>
+        <p class="used">Cited in: <a href="#redbelly">Redbelly, in the terms that matter here</a></p>
+      </article><article class="src" id="src-S34" data-group="bridges">
+        <div class="src-top"><span class="id">S34</span><span>Bridges and wrapped RBNT</span></div>
+        <h3><a href="https://docs.layerzero.network/v2/deployments/deployed-contracts" rel="noopener" target="_blank">Deployed Endpoints, Message Libraries, and Executors (LayerZero V2)</a></h3>
+        <p class="url">LayerZero / accessed 2026-10-23<br>https://docs.layerzero.network/v2/deployments/deployed-contracts</p>
+        <p>Redbelly Mainnet is listed among LayerZero V2 deployments.</p>
+        <div class="phr"><code>Redbelly</code></div>
+        <p class="used">Cited in: <a href="#redbelly">Redbelly, in the terms that matter here</a></p>
+      </article><article class="src" id="src-S35" data-group="community">
+        <div class="src-top"><span class="id">S35</span><span>Redbelly DAO community work</span></div>
+        <h3><a href="https://github.com/Redbelly-DAO-Community-Taskboard/TASK-08-bridge-integration-guide" rel="noopener" target="_blank">TASK-08 Existing Bridge Integration Guide (winning entry archive)</a></h3>
+        <p class="url">Redbelly DAO Community Task Board / 2026-09<br>https://github.com/Redbelly-DAO-Community-Taskboard/TASK-08-bridge-integration-guide</p>
+        <p>A working lock-and-mint bridge from Ethereum Sepolia to Redbelly Testnet (chain ID 153) secured by a 2-of-3 relayer set, plus research on which bridge protocols support Redbelly.</p>
+        <div class="phr"><code>lock-and-mint</code><code>2-of-3</code></div>
+        <p class="used">Cited in: <a href="#redbelly">Redbelly, in the terms that matter here</a>, <a href="#glossary">Glossary</a></p>
+      </article><article class="src" id="src-S36" data-group="community">
+        <div class="src-top"><span class="id">S36</span><span>Redbelly DAO community work</span></div>
+        <h3><a href="https://github.com/tycayomide/redbelly-testnet-bridge/blob/main/ARTICLE.md" rel="noopener" target="_blank">redbelly-testnet-bridge (ARTICLE.md)</a></h3>
+        <p class="url">TASK-08 community entry / 2026-08<br>https://github.com/tycayomide/redbelly-testnet-bridge/blob/main/ARTICLE.md</p>
+        <p>Every wallet needs identity verification before it can send any Testnet transaction; unverified deploys fail with 'Sender not authorised to write transactions'; Mainnet and Testnet approvals are separate.</p>
+        <div class="phr"><code>Sender not authorised to write transactions</code><code>Mainnet and Testnet approvals are separate</code></div>
+        <p class="used">Cited in: <a href="#short-answer">The short answer</a>, <a href="#redbelly">Redbelly, in the terms that matter here</a>, <a href="#connect-now">Can Redbelly connect now?</a>, <a href="#the-work">What a connection would take</a>, <a href="#unknowns">Not possible yet, and unknown</a></p>
+      </article><article class="src" id="src-S37" data-group="community">
+        <div class="src-top"><span class="id">S37</span><span>Redbelly DAO community work</span></div>
+        <h3><a href="https://github.com/Redbelly-DAO-Community-Taskboard/TASK-16-cross-chain-recovery-playbook" rel="noopener" target="_blank">TASK-16 Unstick Your RBNT: Cross-Chain Recovery Playbook (winning entry archive)</a></h3>
+        <p class="url">Redbelly DAO Community Task Board / 2026-09<br>https://github.com/Redbelly-DAO-Community-Taskboard/TASK-16-cross-chain-recovery-playbook</p>
+        <p>Recovery steps for stuck cross-chain RBNT, including that transfers bridged to Ethereum via Polymer do not relay automatically, and that only the Ethereum wRBNT contract has been officially announced.</p>
+        <div class="phr"><code>Cross-Chain Recovery Playbook</code></div>
+        <p class="used">Cited in: <a href="#redbelly">Redbelly, in the terms that matter here</a>, <a href="#compliance">Credentials and assets across chains</a></p>
+      </article><article class="src" id="src-S38" data-group="community">
+        <div class="src-top"><span class="id">S38</span><span>Redbelly DAO community work</span></div>
+        <h3><a href="https://taskboard.redbellydao.network/tasks/TASK-29" rel="noopener" target="_blank">TASK-29 Quant Overledger and Redbelly Interoperability Research (task brief)</a></h3>
+        <p class="url">Redbelly DAO Community Task Board / 2026-10<br>https://taskboard.redbellydao.network/tasks/TASK-29</p>
+        <p>Redbelly and Quant have no announced partnership or talks; Redbelly has not published an official position on bridging.</p>
+        <div class="phr"><code>no announced partnership or talks</code><code>official position on bridging</code></div>
+        <p class="used">Cited in: <a href="#read-first">Read this first</a>, <a href="#unknowns">Not possible yet, and unknown</a>, <a href="#signals">What would change the answer</a></p>
+      </article></div>
+  </div>
+</section>
+
+<section class="band" id="downloads">
+  <div class="band-inner">
+    <p class="kicker">Files</p>
+    <h2 class="band-title" data-split>Downloads</h2>
+    <div class="dl-grid"><a class="dl" href="downloads/Overledger-Redbelly-Feasibility-Study.pdf" download><b>Report (PDF)</b><span>The designed report with cover, diagrams and source list.</span><small>Overledger-Redbelly-Feasibility-Study.pdf / 1.0 MB</small></a><a class="dl" href="downloads/Overledger-Redbelly-Feasibility-Study.docx" download><b>Report (Word)</b><span>Editable copy for the DAO, with the same text and links.</span><small>Overledger-Redbelly-Feasibility-Study.docx / 738 KB</small></a><a class="dl" href="downloads/Overledger-Redbelly-Feasibility-Study.md" download><b>Report (Markdown)</b><span>Plain-text copy that reads well on GitHub.</span><small>Overledger-Redbelly-Feasibility-Study.md / 41 KB</small></a><a class="dl" href="downloads/Community-Summary.md" download><b>Community summary</b><span>X thread and paragraph version, links written out.</span><small>Community-Summary.md / 6 KB</small></a><a class="dl" href="downloads/X-Thread.txt" download><b>X thread (plain text)</b><span>Paste-ready posts, one per block.</span><small>X-Thread.txt / 3 KB</small></a><a class="dl" href="downloads/Source-List.md" download><b>Source list</b><span>Every claim with its links, then every source in detail.</span><small>Source-List.md / 53 KB</small></a><a class="dl" href="downloads/Source-List.csv" download><b>Sources (CSV)</b><span>Spreadsheet-friendly list of all sources.</span><small>Source-List.csv / 19 KB</small></a><a class="dl" href="downloads/Claims.csv" download><b>Claims (CSV)</b><span>Every cited claim with its label and source links.</span><small>Claims.csv / 31 KB</small></a></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <img class="logo logo-on-dark" src="assets/img/dao-logo-on-dark.png" alt="Redbelly DAO" width="56" height="40">
+    <img class="logo logo-on-light" src="assets/img/dao-logo-on-light.png" alt="Redbelly DAO" width="56" height="40">
+    <p>Feasibility research for the Redbelly DAO Community Task Board, TASK-29. Not affiliated with Quant or The Clearing House. Redbelly and Quant have no announced partnership, talks or plans.</p>
+    <p class="mono-line">Research cut-off 2026-10-23 · built 2026-10-23 · 38 sources · verified with <code>npm run audit</code></p>
+  </div>
+</footer>
+
+<div class="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-hidden="true" aria-labelledby="drawer-title" role="dialog">
+  <div class="drawer-head">
+    <span class="drawer-id" id="drawer-id"></span>
+    <button class="icon-btn drawer-close" type="button" aria-label="Close source panel">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <h3 id="drawer-title"></h3>
+  <p class="drawer-meta" id="drawer-meta"></p>
+  <p class="drawer-label">What it supports</p>
+  <p id="drawer-supports"></p>
+  <p class="drawer-label">Phrases the audit checks</p>
+  <ul id="drawer-excerpts" class="drawer-excerpts"></ul>
+  <p class="drawer-label">Cited in</p>
+  <ul id="drawer-cited" class="drawer-cited"></ul>
+  <a class="btn btn-primary drawer-open" id="drawer-open" href="#" target="_blank" rel="noopener">Open the source</a>
+</aside>
+
+<script id="ledger-data" type="application/json">{"S01":{"id":"S01","title":"The Clearing House Partners with Quant to Advance the On-Chain Money Initiative","publisher":"The Clearing House","date":"2026-09-24","url":"https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative","supports":"TCH selected Quant to power the On-Chain Money Initiative, a network for clearing and settling tokenised deposits, connected to RTP and CHIPS and expected to be available to participating institutions in the first half of 2027.","excerpts":["On-Chain Money Initiative","first half of 2027","CHIPS"],"absent":null,"groupName":"The Clearing House","citedIn":[{"id":"short-answer","title":"The short answer"},{"id":"why-now","title":"Why the question is being asked now"},{"id":"offer","title":"What it could offer institutions"},{"id":"unknowns","title":"Not possible yet, and unknown"},{"id":"signals","title":"What would change the answer"},{"id":"glossary","title":"Glossary"}]},"S02":{"id":"S02","title":"The Clearing House Partners with Quant to Advance the On-Chain Money Initiative (Quant press release)","publisher":"Quant","date":"2026-09-24","url":"https://quant.network/press-releases/the-clearing-house-partners-with-quant-to-advance-the-on-chain-money-initiative/","supports":"Quant's technology provides the network's interoperability, orchestration and transaction-management layer; Quant also offers Tokenised Deposits-as-a-Service to institutions that process through TCH but lack tokenised deposit capability.","excerpts":["orchestration","Tokenised Deposits-as-a-Service"],"absent":null,"groupName":"The Clearing House","citedIn":[{"id":"why-now","title":"Why the question is being asked now"}]},"S03":{"id":"S03","title":"Quant powers The Clearing House's On-Chain Money Initiative in the US","publisher":"Quant","date":"2026-09","url":"https://quant.network/news/quant-powers-the-clearing-houses-on-chain-money-initiative-in-the-us/","supports":"Quant describes its role as coordinating clearing and settlement of tokenised deposit transactions with connectivity to existing fiat payment systems.","excerpts":["tokenised deposit","fiat payment systems"],"absent":null,"groupName":"The Clearing House","citedIn":[{"id":"why-now","title":"Why the question is being asked now"}]},"S04":{"id":"S04","title":"Major Financial Institutions Unveil Bank-Led On-Chain Money Initiative","publisher":"The Clearing House","date":"2026-06","url":"https://www.theclearinghouse.org/payment-systems/Articles/2026/06/Major-Financial-Institutions-Unveil-Bank-Led-On-Chain-Money-Initiative","supports":"The initiative was unveiled in June 2026 as a bank-led effort, operated by TCH, for on-chain clearing and settlement of tokenised deposits between banks.","excerpts":["On-Chain Money Initiative","The Clearing House"],"absent":null,"groupName":"The Clearing House","citedIn":[{"id":"why-now","title":"Why the question is being asked now"},{"id":"offer","title":"What it could offer institutions"}]},"S05":{"id":"S05","title":"Start Here (Overledger documentation)","publisher":"Quant Developer Hub","date":"accessed 2026-10-23","url":"https://docs.overledger.dev/docs/start-here","supports":"Overledger is Quant's multi-DLT platform for applications that span more than one blockchain, with one set of credentials and one API surface; client integrations start with the Gateway and Connectors chapters.","excerpts":["multi-DLT platform","single set of credentials"],"absent":["Redbelly"],"groupName":"Quant and Overledger","citedIn":[{"id":"short-answer","title":"The short answer"},{"id":"overledger","title":"Overledger in plain words"},{"id":"offer","title":"What it could offer institutions"},{"id":"unknowns","title":"Not possible yet, and unknown"},{"id":"glossary","title":"Glossary"}]},"S06":{"id":"S06","title":"Overview (Overledger documentation)","publisher":"Quant Developer Hub","date":"accessed 2026-10-23","url":"https://docs.overledger.dev/docs/overview","supports":"The Gateway handles authentication, routing to Connectors or the Fusion Rollup, rate limiting, observability and orchestration of Flow Applications; a Cross Chain Messaging component moves data and contract calls between connected networks; Fusion Firewall policies are mirrored on each connected L1.","excerpts":["Fusion Rollup","Flow Applications"],"absent":["Redbelly"],"groupName":"Quant and Overledger","citedIn":[{"id":"short-answer","title":"The short answer"},{"id":"overledger","title":"Overledger in plain words"},{"id":"connect-now","title":"Can Redbelly connect now?"},{"id":"offer","title":"What it could offer institutions"},{"id":"compliance","title":"Credentials and assets across chains"},{"id":"unknowns","title":"Not possible yet, and unknown"},{"id":"glossary","title":"Glossary"}]},"S07":{"id":"S07","title":"Connectors (Overledger documentation)","publisher":"Quant Developer Hub","date":"accessed 2026-10-23","url":"https://docs.overledger.dev/docs/connectors","supports":"Connectors present a single multi-DLT RPC endpoint backed by per-family node pools; six self-serve families (EVM, Solana, Cosmos, SUI, Hedera, Aptos); permissioned and consortium networks need a managed engagement; a first POST /nodes call can register a new network in a supported family; public nodes only from whitelisted providers, private nodes from any domain; administrative RPC methods are blocked; live list via GET /networks.","excerpts":["multi-DLT RPC endpoint","whitelisted providers","POST /nodes","Hyperledger Fabric"],"absent":["Redbelly"],"groupName":"Quant and Overledger","citedIn":[{"id":"read-first","title":"Read this first"},{"id":"short-answer","title":"The short answer"},{"id":"overledger","title":"Overledger in plain words"},{"id":"redbelly","title":"Redbelly, in the terms that matter here"},{"id":"connect-now","title":"Can Redbelly connect now?"},{"id":"the-work","title":"What a connection would take"},{"id":"offer","title":"What it could offer institutions"},{"id":"unknowns","title":"Not possible yet, and unknown"},{"id":"signals","title":"What would change the answer"},{"id":"glossary","title":"Glossary"}]},"S08":{"id":"S08","title":"Authentication (Overledger documentation)","publisher":"Quant Developer Hub","date":"accessed 2026-10-23","url":"https://docs.overledger.dev/docs/authentication","supports":"Users sign in to Quant Connect for a JWT, mint API keys through the REST API and send them with RPC calls; API keys authenticate access but transactions still need the caller's own wallet signature.","excerpts":["Quant Connect","API key"],"absent":["Redbelly"],"groupName":"Quant and Overledger","citedIn":[{"id":"overledger","title":"Overledger in plain words"}]},"S09":{"id":"S09","title":"Signing (Overledger documentation)","publisher":"Quant Developer Hub","date":"accessed 2026-10-23","url":"https://docs.overledger.dev/docs/signing","supports":"A Signer Flow App handles signing: either the client holds keys and signs, or Quant holds them (testnet hot wallet, or contracted mainnet KMS or HSM); the Gateway and calling Flow App never see private keys.","excerpts":["Signer","HSM"],"absent":["Redbelly"],"groupName":"Quant and Overledger","citedIn":[{"id":"short-answer","title":"The short answer"},{"id":"overledger","title":"Overledger in plain words"},{"id":"the-work","title":"What a connection would take"},{"id":"offer","title":"What it could offer institutions"},{"id":"compliance","title":"Credentials and assets across chains"},{"id":"unknowns","title":"Not possible yet, and unknown"},{"id":"glossary","title":"Glossary"}]},"S10":{"id":"S10","title":"Overledger Firewall (Overledger documentation)","publisher":"Quant Developer Hub","date":"accessed 2026-10-23","url":"https://docs.overledger.dev/docs/overledger-firewall","supports":"An off-chain Connector layer decides whether an authenticated user may reach a network (permissioned networks need the user on an allowlist); an on-chain Fusion Firewall allowlists addresses for contract calls, cross-chain messages and token bridging.","excerpts":["allowlist","Fusion Firewall"],"absent":["Redbelly"],"groupName":"Quant and Overledger","citedIn":[{"id":"short-answer","title":"The short answer"},{"id":"overledger","title":"Overledger in plain words"},{"id":"the-work","title":"What a connection would take"},{"id":"offer","title":"What it could offer institutions"},{"id":"compliance","title":"Credentials and assets across chains"}]},"S11":{"id":"S11","title":"Fusion Rollup (Overledger documentation)","publisher":"Quant Developer Hub","date":"accessed 2026-10-23","url":"https://docs.overledger.dev/docs/fusion-rollup","supports":"Fusion is a multi-ledger optimistic rollup (an OP Stack fork) that anchors to several L1s at once; primitives cover deposit, unify, trigger and withdraw or mint; at testnet launch it connected Ethereum Sepolia, Polygon Amoy and a Quant permissioned Besu testnet; the firewall is locked down on mainnet and more permissive on testnet; a sender on a connected network must be allowlisted for the specific rollup recipient; it flags lock-and-mint mismatch, custodian compromise and oracle failure as bridge risks.","excerpts":["OP Stack","Polygon Amoy","Sepolia"],"absent":["Redbelly"],"groupName":"Quant and Overledger","citedIn":[{"id":"short-answer","title":"The short answer"},{"id":"overledger","title":"Overledger in plain words"},{"id":"connect-now","title":"Can Redbelly connect now?"},{"id":"the-work","title":"What a connection would take"},{"id":"compliance","title":"Credentials and assets across chains"},{"id":"unknowns","title":"Not possible yet, and unknown"},{"id":"glossary","title":"Glossary"}]},"S12":{"id":"S12","title":"How to create a bridge flow (Overledger documentation)","publisher":"Quant Developer Hub","date":"accessed 2026-10-23","url":"https://docs.overledger.dev/docs/set-a-unilateral-bridge","supports":"Bridges are created through a bridge flow in Quant Connect that deploys a destination token contract and returns a Bridge ID used for transfers.","excerpts":["Bridge ID","Quant Connect"],"absent":["Redbelly"],"groupName":"Quant and Overledger","citedIn":[{"id":"short-answer","title":"The short answer"},{"id":"overledger","title":"Overledger in plain words"},{"id":"the-work","title":"What a connection would take"},{"id":"unknowns","title":"Not possible yet, and unknown"}]},"S13":{"id":"S13","title":"Overledger API reference","publisher":"Quant Developer Hub","date":"accessed 2026-10-23","url":"https://docs.overledger.dev/reference","supports":"Quant publishes a reference for the Overledger APIs, the interface any connection would be built against.","excerpts":["Overledger"],"absent":["Redbelly"],"groupName":"Quant and Overledger","citedIn":[{"id":"overledger","title":"Overledger in plain words"}]},"S14":{"id":"S14","title":"Manage Webhooks for Smart Contract Events (Overledger documentation)","publisher":"Quant Developer Hub","date":"accessed 2026-10-23","url":"https://docs.overledger.dev/docs/manage-webhooks-for-smart-contract-events-1","supports":"Overledger documents webhooks that notify applications about smart contract events.","excerpts":["Webhook"],"absent":["Redbelly"],"groupName":"Quant and Overledger","citedIn":[{"id":"overledger","title":"Overledger in plain words"},{"id":"the-work","title":"What a connection would take"},{"id":"offer","title":"What it could offer institutions"}]},"S15":{"id":"S15","title":"Redbelly Network Technical Documentation","publisher":"Redbelly Network","date":"accessed 2026-10-23","url":"https://docs.redbelly.network/","supports":"Redbelly describes itself as a layer 1 blockchain built and optimised for real world asset tokenisation, with identity and eligibility tooling for developers.","excerpts":["Redbelly"],"absent":null,"groupName":"Redbelly Network","citedIn":[{"id":"redbelly","title":"Redbelly, in the terms that matter here"}]},"S16":{"id":"S16","title":"Receptor (Redbelly documentation)","publisher":"Redbelly Network","date":"accessed 2026-10-23","url":"https://docs.redbelly.network/pages/receptor/","supports":"Receptor is Redbelly's native identity and verifiable credential protocol, built on the W3C verifiable credential data model, with Issuer, Holder and Verifier modules; anyone can issue credentials, but issuers that provide network access are accredited.","excerpts":["W3C verifiable credential data model","accredited"],"absent":null,"groupName":"Redbelly Network","citedIn":[{"id":"redbelly","title":"Redbelly, in the terms that matter here"},{"id":"the-work","title":"What a connection would take"},{"id":"offer","title":"What it could offer institutions"},{"id":"compliance","title":"Credentials and assets across chains"},{"id":"signals","title":"What would change the answer"},{"id":"glossary","title":"Glossary"}]},"S17":{"id":"S17","title":"Issuer module (Redbelly documentation)","publisher":"Redbelly Network","date":"accessed 2026-10-23","url":"https://docs.redbelly.network/pages/modules/issuer/","supports":"Only accredited issuers can issue credentials that give users network access.","excerpts":["accredited issuers"],"absent":null,"groupName":"Redbelly Network","citedIn":[{"id":"short-answer","title":"The short answer"},{"id":"redbelly","title":"Redbelly, in the terms that matter here"},{"id":"glossary","title":"Glossary"}]},"S18":{"id":"S18","title":"Proof by Query (Redbelly documentation)","publisher":"Redbelly Network","date":"accessed 2026-10-23","url":"https://docs.redbelly.network/pages/methods/proof-by-query/","supports":"Proof by Query uses zero-knowledge proofs checked by a verifier smart contract that the verifier deploys on Redbelly Network (setZKPRequest), to which the holder submits a proof (submitZKPResponse); personal data is not seen or stored by the verifier.","excerpts":["setZKPRequest","submitZKPResponse"],"absent":null,"groupName":"Redbelly Network","citedIn":[{"id":"compliance","title":"Credentials and assets across chains"},{"id":"signals","title":"What would change the answer"},{"id":"glossary","title":"Glossary"}]},"S19":{"id":"S19","title":"Selective Disclosure (Redbelly documentation)","publisher":"Redbelly Network","date":"accessed 2026-10-23","url":"https://docs.redbelly.network/pages/methods/selective-disclosure/","supports":"Selective Disclosure verifies credentials that require users to reveal specified, verifiable information off-chain.","excerpts":["off-chain"],"absent":null,"groupName":"Redbelly Network","citedIn":[{"id":"compliance","title":"Credentials and assets across chains"}]},"S20":{"id":"S20","title":"Eligibility SDK: Getting Started (Redbelly documentation)","publisher":"Redbelly Network","date":"accessed 2026-10-23","url":"https://docs.redbelly.network/pages/eligibility-sdk/getting-started/","supports":"The Eligibility SDK is installed as @redbellynetwork/eligibility-sdk and needs a Redbelly API key and an allowed issuer DID.","excerpts":["eligibility-sdk"],"absent":null,"groupName":"Redbelly Network","citedIn":[{"id":"compliance","title":"Credentials and assets across chains"}]},"S21":{"id":"S21","title":"Configure Eligibility Criteria (Redbelly documentation)","publisher":"Redbelly Network","date":"accessed 2026-10-23","url":"https://docs.redbelly.network/pages/eligibility-sdk/configure-eligibility-criteria/","supports":"Eligibility criteria are Iden3-style queries over credential types such as passport, proof of address and AML/CTF credentials; on-chain checks use the credentialAtomicQuerySigV2OnChain circuit; on-chain single queries are supported, multi-query is planned.","excerpts":["credentialAtomicQuerySigV2OnChain"],"absent":null,"groupName":"Redbelly Network","citedIn":[{"id":"the-work","title":"What a connection would take"},{"id":"compliance","title":"Credentials and assets across chains"}]},"S22":{"id":"S22","title":"Redbelly Network environments (Vine developer portal)","publisher":"Redbelly Network","date":"accessed 2026-10-23","url":"https://vine.redbelly.network/environments/","supports":"Mainnet is chain ID 151 with RBNT as currency and a public RPC URL; Testnet is chain ID 153.","excerpts":["151","153"],"absent":null,"groupName":"Redbelly Network","citedIn":[{"id":"short-answer","title":"The short answer"},{"id":"redbelly","title":"Redbelly, in the terms that matter here"},{"id":"connect-now","title":"Can Redbelly connect now?"},{"id":"the-work","title":"What a connection would take"},{"id":"signals","title":"What would change the answer"}]},"S23":{"id":"S23","title":"DBFT and super block: security, finality and scalability (Vine developer portal)","publisher":"Redbelly Network","date":"accessed 2026-10-23","url":"https://vine.redbelly.network/consensus/","supports":"Security, finality and scalability come from DBFT, a leaderless consensus algorithm tolerating faults up to t \u003c n/3, and the super block optimisation of the EVM.","excerpts":["leaderless","super block"],"absent":null,"groupName":"Redbelly Network","citedIn":[{"id":"redbelly","title":"Redbelly, in the terms that matter here"},{"id":"offer","title":"What it could offer institutions"}]},"S24":{"id":"S24","title":"Smart contracts (Vine developer portal)","publisher":"Redbelly Network","date":"accessed 2026-10-23","url":"https://vine.redbelly.network/sc-smart-contracts","supports":"Redbelly executes smart contracts written for the EVM in Solidity; testing should happen on Testnet.","excerpts":["Solidity"],"absent":null,"groupName":"Redbelly Network","citedIn":[{"id":"short-answer","title":"The short answer"},{"id":"redbelly","title":"Redbelly, in the terms that matter here"},{"id":"connect-now","title":"Can Redbelly connect now?"},{"id":"glossary","title":"Glossary"}]},"S25":{"id":"S25","title":"Network fees (Vine developer portal)","publisher":"Redbelly Network","date":"accessed 2026-10-23","url":"https://vine.redbelly.network/network-fees/","supports":"The unit price of gas is fixed in US dollar terms and converted to RBNT at execution using an on-chain price oracle.","excerpts":["oracle"],"absent":null,"groupName":"Redbelly Network","citedIn":[{"id":"redbelly","title":"Redbelly, in the terms that matter here"},{"id":"connect-now","title":"Can Redbelly connect now?"},{"id":"offer","title":"What it could offer institutions"}]},"S26":{"id":"S26","title":"Redbelly Network native currency (Vine developer portal)","publisher":"Redbelly Network","date":"accessed 2026-10-23","url":"https://vine.redbelly.network/native-currency/","supports":"Lists routes for RBNT on other chains (Base via LayerZero, Ethereum mainnet via Polymer) and points to Lucid Labs Bridge for moving RBNT back to Redbelly.","excerpts":["LayerZero","Polymer","Lucid Labs"],"absent":null,"groupName":"Redbelly Network","citedIn":[{"id":"redbelly","title":"Redbelly, in the terms that matter here"}]},"S27":{"id":"S27","title":"Accessing the network (Vine developer portal)","publisher":"Redbelly Network","date":"accessed 2026-10-23","url":"https://vine.redbelly.network/id-accessing-the-network","supports":"Users connect an EVM wallet to the Redbelly access dApp and prove a valid photo identity document through biometric checks before their account is enabled.","excerpts":["access"],"absent":null,"groupName":"Redbelly Network","citedIn":[{"id":"redbelly","title":"Redbelly, in the terms that matter here"}]},"S28":{"id":"S28","title":"Redbelly Access","publisher":"Redbelly Network","date":"accessed 2026-10-23","url":"https://access.redbelly.network/","supports":"Identity is verified by the accredited issuer Averer before it issues the Redbelly Network Access Credential to the account.","excerpts":["Averer"],"absent":null,"groupName":"Redbelly Network","citedIn":[{"id":"short-answer","title":"The short answer"},{"id":"redbelly","title":"Redbelly, in the terms that matter here"}]},"S29":{"id":"S29","title":"Redbelly DevNet blog post","publisher":"Redbelly Network","date":"older post, accessed 2026-10-23","url":"https://redbelly.network/blog/devnet","supports":"Before users can self-enable their accounts with write access to the network, they must claim an access credential from a network accredited issuer.","excerpts":["write access"],"absent":null,"groupName":"Redbelly Network","citedIn":[{"id":"short-answer","title":"The short answer"},{"id":"redbelly","title":"Redbelly, in the terms that matter here"},{"id":"connect-now","title":"Can Redbelly connect now?"},{"id":"the-work","title":"What a connection would take"},{"id":"offer","title":"What it could offer institutions"},{"id":"compliance","title":"Credentials and assets across chains"},{"id":"unknowns","title":"Not possible yet, and unknown"}]},"S30":{"id":"S30","title":"Node operator guide (Vine developer portal)","publisher":"Redbelly Network","date":"accessed 2026-10-23","url":"https://vine.redbelly.network/nodes/operator-guide/","supports":"Companies or trusts may register through Redbelly's Business verification process.","excerpts":["Business verification"],"absent":null,"groupName":"Redbelly Network","citedIn":[{"id":"redbelly","title":"Redbelly, in the terms that matter here"},{"id":"the-work","title":"What a connection would take"}]},"S31":{"id":"S31","title":"Tokeniser","publisher":"Tokeniser Pty Ltd","date":"accessed 2026-10-23","url":"https://tokeniser.com/","supports":"Tokeniser operates on Redbelly Network with identity and eligibility built into the protocol; eligibility (identity, KYC, AML, CTF, wholesale and sophisticated investor tests, TMD) is programmed into every asset; every holder is verified and every transfer checked against the asset's rules; features include secondary transfer and collateral mobility.","excerpts":["every transfer checked against the asset's rules","Redbelly Network"],"absent":null,"groupName":"Tokeniser","citedIn":[{"id":"offer","title":"What it could offer institutions"},{"id":"compliance","title":"Credentials and assets across chains"}]},"S32":{"id":"S32","title":"Celer Announces cBridge Support for Redbelly","publisher":"Celer Network","date":"2025-08-01","url":"https://blog.celer.network/2025/08/01/celer-announces-cbridge-support-for-redbelly/","supports":"cBridge connects Ethereum, BNB Chain and Redbelly with a pegged bridge model; RBNT moves from Redbelly to Ethereum and BNB Chain.","excerpts":["Redbelly","BNB Chain"],"absent":null,"groupName":"Bridges and wrapped RBNT","citedIn":[{"id":"redbelly","title":"Redbelly, in the terms that matter here"}]},"S33":{"id":"S33","title":"Redbelly Network on X: Wrapped RBNT live on Ethereum Mainnet","publisher":"Redbelly Network","date":"2025-02-14","url":"https://x.com/RedbellyNetwork/status/1890340030197166112","supports":"Redbelly announced Wrapped RBNT on Ethereum Mainnet with the official contract 0xb45ffb51984d626ee758b336c61cf20990c6bf13.","excerpts":["0xb45ffb51984d626ee758b336c61cf20990c6bf13"],"absent":null,"groupName":"Bridges and wrapped RBNT","citedIn":[{"id":"redbelly","title":"Redbelly, in the terms that matter here"}]},"S34":{"id":"S34","title":"Deployed Endpoints, Message Libraries, and Executors (LayerZero V2)","publisher":"LayerZero","date":"accessed 2026-10-23","url":"https://docs.layerzero.network/v2/deployments/deployed-contracts","supports":"Redbelly Mainnet is listed among LayerZero V2 deployments.","excerpts":["Redbelly"],"absent":null,"groupName":"Bridges and wrapped RBNT","citedIn":[{"id":"redbelly","title":"Redbelly, in the terms that matter here"}]},"S35":{"id":"S35","title":"TASK-08 Existing Bridge Integration Guide (winning entry archive)","publisher":"Redbelly DAO Community Task Board","date":"2026-09","url":"https://github.com/Redbelly-DAO-Community-Taskboard/TASK-08-bridge-integration-guide","supports":"A working lock-and-mint bridge from Ethereum Sepolia to Redbelly Testnet (chain ID 153) secured by a 2-of-3 relayer set, plus research on which bridge protocols support Redbelly.","excerpts":["lock-and-mint","2-of-3"],"absent":null,"groupName":"Redbelly DAO community work","citedIn":[{"id":"redbelly","title":"Redbelly, in the terms that matter here"},{"id":"glossary","title":"Glossary"}]},"S36":{"id":"S36","title":"redbelly-testnet-bridge (ARTICLE.md)","publisher":"TASK-08 community entry","date":"2026-08","url":"https://github.com/tycayomide/redbelly-testnet-bridge/blob/main/ARTICLE.md","supports":"Every wallet needs identity verification before it can send any Testnet transaction; unverified deploys fail with 'Sender not authorised to write transactions'; Mainnet and Testnet approvals are separate.","excerpts":["Sender not authorised to write transactions","Mainnet and Testnet approvals are separate"],"absent":null,"groupName":"Redbelly DAO community work","citedIn":[{"id":"short-answer","title":"The short answer"},{"id":"redbelly","title":"Redbelly, in the terms that matter here"},{"id":"connect-now","title":"Can Redbelly connect now?"},{"id":"the-work","title":"What a connection would take"},{"id":"unknowns","title":"Not possible yet, and unknown"}]},"S37":{"id":"S37","title":"TASK-16 Unstick Your RBNT: Cross-Chain Recovery Playbook (winning entry archive)","publisher":"Redbelly DAO Community Task Board","date":"2026-09","url":"https://github.com/Redbelly-DAO-Community-Taskboard/TASK-16-cross-chain-recovery-playbook","supports":"Recovery steps for stuck cross-chain RBNT, including that transfers bridged to Ethereum via Polymer do not relay automatically, and that only the Ethereum wRBNT contract has been officially announced.","excerpts":["Cross-Chain Recovery Playbook"],"absent":null,"groupName":"Redbelly DAO community work","citedIn":[{"id":"redbelly","title":"Redbelly, in the terms that matter here"},{"id":"compliance","title":"Credentials and assets across chains"}]},"S38":{"id":"S38","title":"TASK-29 Quant Overledger and Redbelly Interoperability Research (task brief)","publisher":"Redbelly DAO Community Task Board","date":"2026-10","url":"https://taskboard.redbellydao.network/tasks/TASK-29","supports":"Redbelly and Quant have no announced partnership or talks; Redbelly has not published an official position on bridging.","excerpts":["no announced partnership or talks","official position on bridging"],"absent":null,"groupName":"Redbelly DAO community work","citedIn":[{"id":"read-first","title":"Read this first"},{"id":"unknowns","title":"Not possible yet, and unknown"},{"id":"signals","title":"What would change the answer"}]}}</script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>

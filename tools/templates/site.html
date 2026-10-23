@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en-AU" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redbelly and Overledger: Feasibility Research</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0c1317">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Could Redbelly plug into Quant's Overledger?">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:image" content="assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/be-vietnam-pro-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/be-vietnam-pro-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/main.css">
+<script src="assets/js/theme.js"></script>
+</head>
+<body data-lens="all">
+<a class="skip" href="#report">Skip to the report</a>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<header class="topbar">
+  <a class="brand" href="#top" aria-label="Back to top">
+    <img class="logo logo-on-dark" src="assets/img/dao-logo-on-dark.png" alt="Redbelly DAO" width="45" height="32">
+    <img class="logo logo-on-light" src="assets/img/dao-logo-on-light.png" alt="Redbelly DAO" width="45" height="32">
+    <span class="brand-text">Overledger feasibility</span>
+  </a>
+  <nav class="topnav" id="topnav" aria-label="Sections">
+    <a href="#short-answer">Answer</a>
+    <a href="#overledger">Overledger</a>
+    <a href="#connect-now">Connect now?</a>
+    <a href="#compliance">Compliance</a>
+    <a href="#unknowns">Unknowns</a>
+    <a href="#community">Summary</a>
+    <a href="#sources">Sources</a>
+    <a href="#downloads">Downloads</a>
+  </nav>
+  <button class="icon-btn theme-toggle" type="button" aria-label="Switch between light and dark theme">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+  <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="topnav" aria-label="Open section menu">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><span>TASK-29</span><span>Feasibility research</span><span>Cut-off {{CUTOFF_HUMAN}}</span></p>
+      <h1 class="headline" data-split>Could Redbelly plug into <em>Quant's Overledger?</em></h1>
+      <p class="lede">Short answer: <strong class="decode" data-decode="Not connected today.">Not connected today.</strong> A thin link looks possible on paper. Anything deeper needs Quant, and Redbelly's compliance would not cross chains by default.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#short-answer">Read the findings</a>
+        <a class="btn" href="downloads/{{PDF_NAME}}">Download the PDF</a>
+        <a class="btn btn-quiet" href="#sources">{{SOURCE_COUNT}} sources</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 520 400" class="link-art">
+        <defs>
+          <linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="currentColor" stop-opacity="1"/><stop offset="1" stop-color="currentColor" stop-opacity=".15"/></linearGradient>
+        </defs>
+        <g class="la-grid">
+          <path d="M0 80H520M0 160H520M0 240H520M0 320H520M104 0V400M208 0V400M312 0V400M416 0V400"/>
+        </g>
+        <g class="la-chain">
+          <path class="la-hex" d="M108 128l64 37v74l-64 37-64-37v-74z"/>
+          <path class="la-hex la-hex-in" d="M108 150l45 26v52l-45 26-45-26v-52z"/>
+          <text x="108" y="200" class="la-name">Redbelly</text>
+          <text x="108" y="220" class="la-mono">EVM · 151</text>
+        </g>
+        <path class="la-wire la-wire-a" d="M172 202C220 202 228 202 262 202"/>
+        <path class="la-wire la-wire-b" d="M300 202C326 202 334 182 359 182"/>
+        <circle class="la-dot" r="4"><animateMotion dur="2.6s" repeatCount="indefinite" path="M172 202C220 202 228 202 262 202" keyPoints="0;1;1" keyTimes="0;.7;1" calcMode="linear"/></circle>
+        <g class="la-gate">
+          <rect x="262" y="170" width="38" height="64" rx="6"/>
+          <path d="M281 186l10 4v7c0 6-4 10-10 12-6-2-10-6-10-12v-7z" class="la-shield"/>
+          <text x="281" y="256" class="la-mono la-cap">identity gate</text>
+        </g>
+        <g class="la-ol">
+          <rect x="344" y="104" width="164" height="196" rx="14" class="la-box"/>
+          <text x="426" y="134" class="la-name">Overledger</text>
+          <text x="426" y="152" class="la-mono">self-serve families</text>
+          <g class="la-fams">
+            <g class="la-fam la-fam-hot"><circle cx="368" cy="182" r="7"/><text x="381" y="186">EVM</text></g>
+            <g class="la-fam"><circle cx="368" cy="212" r="7"/><text x="381" y="216">Solana</text></g>
+            <g class="la-fam"><circle cx="368" cy="242" r="7"/><text x="381" y="246">Cosmos</text></g>
+            <g class="la-fam"><circle cx="440" cy="182" r="7"/><text x="453" y="186">SUI</text></g>
+            <g class="la-fam"><circle cx="440" cy="212" r="7"/><text x="453" y="216">Hedera</text></g>
+            <g class="la-fam"><circle cx="440" cy="242" r="7"/><text x="453" y="246">Aptos</text></g>
+          </g>
+          <text x="426" y="280" class="la-mono">+ managed engagement</text>
+        </g>
+        <text x="332" y="230" class="la-mono la-q">untested</text>
+      </svg>
+    </div>
+  </div>
+  <div class="notice-strip" role="note">
+    <span class="ns-tag">Notice</span>
+    <span>Redbelly and Quant have no announced partnership, talks or plans. This page is feasibility research only, with no price talk and no investment advice.</span>
+  </div>
+</section>
+
+<section class="glance" aria-label="Key numbers from the sources">
+  {{STATS}}
+</section>
+
+<div class="lens-wrap">
+  <div class="lens" role="group" aria-label="Highlight findings by status">
+    <span class="lens-label">Lens</span>
+    <button type="button" data-lens="all" aria-pressed="true">All</button>
+    <button type="button" data-lens="confirmed" aria-pressed="false"><i class="dot dot-confirmed"></i>Confirmed <b>{{COUNT_CONFIRMED}}</b></button>
+    <button type="button" data-lens="analysis" aria-pressed="false"><i class="dot dot-analysis"></i>Analysis <b>{{COUNT_ANALYSIS}}</b></button>
+    <button type="button" data-lens="unknown" aria-pressed="false"><i class="dot dot-unknown"></i>Unknown <b>{{COUNT_UNKNOWN}}</b></button>
+  </div>
+</div>
+
+<div class="layout">
+  <aside class="toc" aria-label="Report contents">
+    <p class="toc-title">Contents</p>
+    <ol>{{TOC}}</ol>
+  </aside>
+  <main class="report" id="report">
+{{CONTENT}}
+  </main>
+</div>
+
+<section class="band" id="community">
+  <div class="band-inner">
+    <p class="kicker">Deliverable 2</p>
+    <h2 class="band-title" data-split>Community summary</h2>
+    <p class="band-lede">Ready for the DAO to share. Each post carries its source links; X counts every link as 23 characters, and every post fits in 280.</p>
+    <div class="thread-tools"><button type="button" class="btn btn-small" data-copy-thread>Copy the whole thread</button></div>
+    <ol class="thread">{{THREAD}}</ol>
+    <h3 class="sub">In a few paragraphs</h3>
+    <div class="paras">{{PARAS}}</div>
+  </div>
+</section>
+
+<section class="band band-alt" id="sources">
+  <div class="band-inner">
+    <p class="kicker">Deliverable 3</p>
+    <h2 class="band-title" data-split>Source list</h2>
+    <p class="band-lede">Every factual claim links to one of these {{SOURCE_COUNT}} sources. Each card shows what the source supports, the exact phrases the audit re-checks, and where the report cites it.</p>
+    <div class="src-filter" role="group" aria-label="Filter sources">{{SOURCE_FILTERS}}</div>
+    <div class="src-grid">{{SOURCES}}</div>
+  </div>
+</section>
+
+<section class="band" id="downloads">
+  <div class="band-inner">
+    <p class="kicker">Files</p>
+    <h2 class="band-title" data-split>Downloads</h2>
+    <div class="dl-grid">{{DOWNLOADS}}</div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <img class="logo logo-on-dark" src="assets/img/dao-logo-on-dark.png" alt="Redbelly DAO" width="56" height="40">
+    <img class="logo logo-on-light" src="assets/img/dao-logo-on-light.png" alt="Redbelly DAO" width="56" height="40">
+    <p>Feasibility research for the Redbelly DAO Community Task Board, TASK-29. Not affiliated with Quant or The Clearing House. Redbelly and Quant have no announced partnership, talks or plans.</p>
+    <p class="mono-line">Research cut-off {{CUTOFF}} · built {{BUILT}} · {{SOURCE_COUNT}} sources · verified with <code>npm run audit</code></p>
+  </div>
+</footer>
+
+<div class="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-hidden="true" aria-labelledby="drawer-title" role="dialog">
+  <div class="drawer-head">
+    <span class="drawer-id" id="drawer-id"></span>
+    <button class="icon-btn drawer-close" type="button" aria-label="Close source panel">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <h3 id="drawer-title"></h3>
+  <p class="drawer-meta" id="drawer-meta"></p>
+  <p class="drawer-label">What it supports</p>
+  <p id="drawer-supports"></p>
+  <p class="drawer-label">Phrases the audit checks</p>
+  <ul id="drawer-excerpts" class="drawer-excerpts"></ul>
+  <p class="drawer-label">Cited in</p>
+  <ul id="drawer-cited" class="drawer-cited"></ul>
+  <a class="btn btn-primary drawer-open" id="drawer-open" href="#" target="_blank" rel="noopener">Open the source</a>
+</aside>
+
+<script id="ledger-data" type="application/json">{{LEDGER_JSON}}</script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
